@@ -1,0 +1,91 @@
+﻿<Window x:Class="AmbiStore.Views.MENUSTRIPViewMAH"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AmbiStore.Views"
+        xmlns:mdix="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:mahControls="http://metro.mahapps.com/winfx/xaml/controls"
+        mc:Ignorable="d"
+        Title="MenuStrip" Height="450" Width="1084" Closing="Window_Closing">
+    <Grid VerticalAlignment="Center" HorizontalAlignment="Left" Width="1070" Margin="10,0,0,0" >
+
+        <Button Height="80" Width="80" Margin="5,2,985,-2" Content="Dashboard"/>
+        <Button Height="80" Width="80" Margin="90,2,900,-2" Content="Contato" Click="Contatos_Click"/>
+        <Button Height="80" Width="80" Margin="175,2,815,-2" Content="Estoque"/>
+        <Button Height="80" Margin="260,2,730,-2" Content="DAV" >
+            <!-- <TextBlock TextAlignment="Center">Estoque<LineBreak/>Serviços</TextBlock>-->
+        </Button>
+
+        <Button Height="80" Width="80" Margin="345,2,645,-2" Click="Button_Click" Content="Nota Fiscal Venda" d:LayoutOverrides="Width">
+
+        </Button>
+
+        <Button Height="80" Width="80" Margin="430,2,560,-2" Click="Button_Click" Content="Nota Fiscal Compra"/>
+        <Button Height="80" Width="80" Margin="515,2,475,-2" Click="Button_Click" Content="Mov. Caixa" d:LayoutOverrides="HorizontalAlignment"/>
+        <Button Height="80" Width="80" Margin="600,2,390,-2" Click="Button_Click" Content="Bancos"/>
+        <Button Height="80" Width="80" Margin="685,2,305,-2" Click="Button_Click" Content="Cheques"/>
+        <Button Height="80" Width="80" Margin="770,2,220,-2" Click="Button_Click" Content="Contas a Receber"/>
+        <Button Height="80" Width="80" Margin="770,2,220,-2" Click="Button_Click" Content="Contas a Pagar"/>
+        <Button Height="80" Width="80" Margin="855,2,135,-2" Click="Button_Click" Content="Cadastro"/>
+
+
+
+        <mdix:PopupBox StaysOpen="True" Content="Asdede"  PlacementMode="BottomAndAlignCentres" x:Name="PopupBox" Margin="940,-6,43,-10" HorizontalAlignment="Stretch">
+            <mdix:PopupBox.ToggleContent>
+                <Border Background="{DynamicResource PrimaryHueMidBrush}" 
+                        TextElement.Foreground="{DynamicResource PrimaryHueMidForegroundBrush}" 
+                        Padding="8" Height="80" Width="87">
+                    <StackPanel Orientation="Horizontal" >
+                        <TextBlock Text="Configuração" FontFamily="Segoe UI" FontSize="14" Width="78" Height="67"/>
+                        <mdix:PackIcon Kind="Earth" Margin="-25,39,10,10" />
+                    </StackPanel>
+                </Border>
+
+            </mdix:PopupBox.ToggleContent>
+            <Grid>
+                <Grid.Resources>
+                    <Style TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+                        <Setter Property="Margin" Value="10,3" />
+                    </Style>
+                   
+                </Grid.Resources>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Button x:Name="Emitente_btn" Content="Emitente" Grid.Row="0" Grid.Column="0" Click="Emitente_btn_Click"/>
+                <Button Content="Permissões" Grid.Row="0" Grid.Column="1"/>
+                <Button Content="Buscar Atualizações" Grid.Row="1" Grid.Column="0"/>
+                <Button Content="Licenças" Grid.Row="1" Grid.Column="1"/>
+                <Button Content="Minhas Notas" Grid.Row="2" Grid.Column="0"/>
+                <Button Content="Operações ICMS/ISS" Grid.Row="2" Grid.Column="1">
+                    
+                </Button>
+                <Button Content="Parâmetros" Grid.Row="3" Grid.Column="0"/>
+                
+                
+                <!--<Button Content="Done" Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" HorizontalAlignment="Center" 
+                        Style="{StaticResource MaterialDesignFlatButton}" Click="Done_Click" />-->
+
+            </Grid>
+
+        </mdix:PopupBox>
+
+
+
+
+
+
+    </Grid>
+</Window>

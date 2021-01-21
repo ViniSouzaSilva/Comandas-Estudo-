@@ -1,0 +1,694 @@
+﻿<Window x:Class="AmbiStore.Views.ESTOQUECadastro"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AmbiStore.Views"
+        xmlns:enums="clr-namespace:AmbiStore.Shared.Libraries.Enums;assembly=shared"
+        xmlns:aux="clr-namespace:AmbiStore.Auxiliares"
+        xmlns:controls="clr-namespace:AmbiStore.Controls"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:ViewModels="clr-namespace:AmbiStore.ViewModels" 
+        xmlns:currencytextboxcontrol="clr-namespace:CurrencyTextBoxControl;assembly=CurrencyTextbox"
+        mc:Ignorable="d"
+        Title="CadastroEstoque" Height="659" Width="814" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow" FontSize="12">
+    <Window.DataContext>
+        <ViewModels:ESTOQUEViewModel/>
+    </Window.DataContext>
+    <Window.Resources>
+        <ObjectDataProvider x:Key="TipoItem" MethodName="GetValues" ObjectType="{x:Type sys:Enum}">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="enums:TipoItem"/>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+        <aux:ComparisonConverter x:Key="ComparisonConverter"/>
+        <aux:EnumDescriptionConverter x:Key="enumDescriptionConverter"/>
+    </Window.Resources>
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <TabControl Grid.Row="0">
+            <TabItem Header="Cadastro">
+                <Grid Margin="0,3,6,3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="7*"/>
+                        <RowDefinition Height="7*"/>
+                        <RowDefinition Height="7*"/>
+                        <RowDefinition Height="7*"/>
+                        <RowDefinition Height="7*"/>
+                        <RowDefinition Height="7*"/>
+                        <RowDefinition Height="7*"/>
+                        <RowDefinition Height="7*"/>
+                        <RowDefinition Height="7*"/>
+                        <RowDefinition Height="7*"/>
+                        <RowDefinition Height="7*"/>
+                        <RowDefinition Height="7*"/>
+                        <RowDefinition Height="7*"/>
+                        <RowDefinition Height="7*"/>
+                        <RowDefinition Height="7*"/>
+                        <RowDefinition Height="7*"/>
+                        <RowDefinition Height="7*"/>
+                        <RowDefinition Height="7*"/>
+                        <RowDefinition Height="7*"/>
+                        <RowDefinition Height="5*"/>
+                        <RowDefinition Height="2*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="Tipo de Item:" HorizontalAlignment="Right" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                    <ComboBox Grid.Column="3" Margin="2,0,0,0" VerticalAlignment="Center" Grid.ColumnSpan="4" ItemsSource="{Binding Mode=OneWay, Source={StaticResource TipoItem}}" SelectedItem="{Binding tipoItem}">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Converter={StaticResource enumDescriptionConverter}}"/>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                    <StackPanel VerticalAlignment="Center" Grid.Column="7" Grid.ColumnSpan="6" Orientation="Horizontal" Margin="5,0,0,0">
+                        <RadioButton VerticalAlignment="Center" VerticalContentAlignment="Center" Margin="0,0,10,0" Content="Serial" IsChecked="{Binding Path=ESTOQUE.TIPOITEMCADASTRO, Converter={StaticResource ComparisonConverter}, ConverterParameter={x:Static enums:TipoItemCadastro.Serial}}"/>
+                        <RadioButton VerticalAlignment="Center" VerticalContentAlignment="Center" Margin="0,0,10,0" Content="Grade" IsChecked="{Binding Path=ESTOQUE.TIPOITEMCADASTRO, Converter={StaticResource ComparisonConverter}, ConverterParameter={x:Static enums:TipoItemCadastro.Grade}}"/>
+                        <RadioButton VerticalAlignment="Center" VerticalContentAlignment="Center" Margin="0,0,10,0" Content="Simples" IsChecked="{Binding Path=ESTOQUE.TIPOITEMCADASTRO, Converter={StaticResource ComparisonConverter}, ConverterParameter={x:Static enums:TipoItemCadastro.Nenhum}}"/>
+                    </StackPanel>
+                    <TextBlock Text="Descrição:" HorizontalAlignment="Right" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center" Margin="17,0,0,0"/>
+                    <TextBox Grid.Column="3" Margin="2,0,0,0" Grid.Row="1" Text="{Binding ESTOQUE.DESCRICAO, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Grid.ColumnSpan="13" Height="21.96"/>
+                    <TextBox x:Name="txb_CodBarra" Grid.Column="3" Margin="2,0,0,0" Grid.Row="7" Text="{Binding ESTOQUE.PRODUTO_ESTOQUE.COD_BARRA, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Grid.ColumnSpan="4" Height="21.96" Visibility="{Binding IsProduto}"/>
+                    <TextBox IsEnabled="False" Grid.Column="3" Margin="2,0,0,0" Grid.Row="8" VerticalAlignment="Center" Grid.ColumnSpan="5" Height="21.96" Visibility="{Binding IsProduto}"/>
+                    <TextBox Grid.Column="2" Margin="2,3.25,0,3.25" Grid.Row="13" Text="{Binding ESTOQUE.PRODUTO_ESTOQUE.NCM}" VerticalAlignment="Stretch" Grid.ColumnSpan="2" Height="21.96" Visibility="{Binding IsProduto}"/>
+                    <TextBox Grid.Column="6" Margin="2,3.25,0,3.25" Grid.Row="13" Text="{Binding ESTOQUE.PRODUTO_ESTOQUE.CEST}" VerticalAlignment="Stretch" Grid.ColumnSpan="2" Height="21.96" Visibility="{Binding IsProduto}"/>
+                    <TextBlock Text="Código:" HorizontalAlignment="Left" Grid.Row="1" Grid.Column="16" Grid.ColumnSpan="2" VerticalAlignment="Center" Margin="30,0,0,0"/>
+                    <TextBox IsEnabled="False" Grid.Column="18" Margin="2,0,0,0" Grid.Row="1" Text="{Binding ESTOQUE.ID}" VerticalAlignment="Center" Grid.ColumnSpan="2" Height="21.96"/>
+                    <TextBlock Text="Grupo:" HorizontalAlignment="Right" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center" Margin="35,0,0,0"/>
+                    <TextBlock Text="Unidade de Medida:" HorizontalAlignment="Right" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" VerticalAlignment="Center" Margin="2,0,0,0"/>
+                    <TextBlock Text="Fornecedor Preferen." HorizontalAlignment="Right" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                    <TextBlock Text="Taxa ICMS/ISS" HorizontalAlignment="Right" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" VerticalAlignment="Center" Margin="35,0,0,0"/>
+                    <TextBlock Text="Taxa ICMS/ISS CFe" HorizontalAlignment="Right" Grid.Row="6" Grid.ColumnSpan="3" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                    <TextBlock Text="NBS / Código LST SPED" HorizontalAlignment="Right" Grid.Row="7" Grid.ColumnSpan="4" VerticalAlignment="Center" Margin="0,0,0,0" Visibility="{Binding IsServico}"/>
+                    <TextBox Grid.Column="4" Margin="2,0,0,0" Grid.Row="7" Text="{Binding ESTOQUE.SERVICO_ESTOQUE.COD_LST}" VerticalAlignment="Center" Grid.ColumnSpan="2" Height="21.96" Visibility="{Binding IsServico}"/>
+                    <TextBlock Text="CNAE Fiscal" HorizontalAlignment="Right" Grid.Row="9" Grid.ColumnSpan="4" VerticalAlignment="Center" Margin="0,0,0,0" Visibility="{Binding IsServico}"/>
+                    <TextBox Grid.Column="4" Margin="2,0,0,0" Grid.Row="9" Text="{Binding ESTOQUE.SERVICO_ESTOQUE.CNAE}" VerticalAlignment="Center" Grid.ColumnSpan="2" Height="21.96" Visibility="{Binding IsServico}"/>
+                    <TextBlock Text="Código IBPT" HorizontalAlignment="Right" Grid.Row="8" Grid.ColumnSpan="4" VerticalAlignment="Center" Margin="0,0,0,0" Visibility="{Binding IsServico}"/>
+                    <TextBox Grid.Column="4" Margin="2,0,0,0" Grid.Row="8" Text="{Binding ESTOQUE.SERVICO_ESTOQUE.CODIGO_IBPT}" VerticalAlignment="Center" Grid.ColumnSpan="2" Height="21.96" Visibility="{Binding IsServico}"/>
+                    <TextBlock Text="CST" HorizontalAlignment="Right" Grid.Row="10" Grid.ColumnSpan="4" VerticalAlignment="Center" Margin="0,0,0,0" Visibility="{Binding IsServico}"/>
+                    <TextBox Grid.Column="4" Margin="2,0,0,0" Grid.Row="10" Text="{Binding ESTOQUE.SERVICO_ESTOQUE.CST}" VerticalAlignment="Center" Grid.ColumnSpan="2" Height="21.96" Visibility="{Binding IsServico}"/>
+
+                    <!--<ComboBox Grid.Column="4" Margin="2,0,37,0" Grid.Row="7" VerticalAlignment="Center" Grid.ColumnSpan="6"
+                              ItemsSource="{Binding TAXA_UFs}"
+                              SelectedValue="{Binding ESTOQUE.TAXA_UF_CFE.ID, Mode=TwoWay}"  
+                              DisplayMemberPath="NOME" 
+                              SelectedValuePath="ID"
+                              SelectedItem="{Binding ESTOQUE.TAXA_UF_CFE}"
+                              >
+                        <ComboBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <VirtualizingStackPanel/>
+                            </ItemsPanelTemplate>
+                        </ComboBox.ItemsPanel>
+                    </ComboBox>-->
+
+                    <TextBlock Text="Código de Barras" HorizontalAlignment="Right" Grid.Row="7" Grid.ColumnSpan="3" VerticalAlignment="Center" Margin="0,0,0,0" Visibility="{Binding IsProduto}"/>
+                    <TextBlock Text="Desc. Complementar" HorizontalAlignment="Right" Grid.Row="8" Grid.ColumnSpan="3" VerticalAlignment="Center" Margin="0,0,0,0" Visibility="{Binding IsProduto}"/>
+                    <TextBlock Text="NCM" HorizontalAlignment="Right" Grid.Row="13" Grid.ColumnSpan="1" Grid.Column="1" VerticalAlignment="Center" Margin="0,0,0,0" Visibility="{Binding IsProduto}"/>
+                    <TextBlock Text="CEST" HorizontalAlignment="Right" Grid.Row="13" Grid.ColumnSpan="1" Grid.Column="5" VerticalAlignment="Center" Margin="0,0,0,0" Visibility="{Binding IsProduto}"/>
+                    <TextBlock Text="Preço Atacado" HorizontalAlignment="Right" Grid.Row="4" Grid.Column="9" Grid.ColumnSpan="3" VerticalAlignment="Center" Margin="33,0,0,0"/>
+                    <TextBlock Text="Quantidade Atacado" HorizontalAlignment="Right" Grid.Row="5" Grid.Column="9" Grid.ColumnSpan="3" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                    <TextBlock Text="Quantidade" HorizontalAlignment="Right" Grid.Row="7" Grid.Column="9" Grid.ColumnSpan="3" VerticalAlignment="Center" Margin="0,0,0,0" Visibility="{Binding IsProduto}"/>
+                    <TextBlock Visibility="{Binding IsProduto}" Text="Custo de Compra" HorizontalAlignment="Right" Grid.Row="5" Grid.Column="15" Grid.ColumnSpan="3" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                    <TextBlock Foreground="Gray" Text="Custo Médio" HorizontalAlignment="Right" Grid.Row="6" Grid.Column="15" Grid.ColumnSpan="3" VerticalAlignment="Center" Margin="0,0,0,0" Visibility="{Binding IsProduto}"/>
+                    <TextBlock Text="Qtd. Mínima" HorizontalAlignment="Right" Grid.Row="8" Grid.Column="9" Grid.ColumnSpan="3" VerticalAlignment="Center" Margin="0,0,0,0" Visibility="{Binding IsProduto}"/>
+                    <TextBlock Text="Qtd. Reservada" HorizontalAlignment="Right" Grid.Row="9" Grid.Column="9" Grid.ColumnSpan="3" VerticalAlignment="Center" Margin="0,0,0,0" Visibility="{Binding IsProduto}"/>
+                    <TextBlock Text="Peso" HorizontalAlignment="Right" Grid.Row="10" Grid.Column="9" Grid.ColumnSpan="3" VerticalAlignment="Center" Margin="0,0,0,0" Visibility="{Binding IsProduto}"/>
+                    <ComboBox Grid.Column="3" Margin="2,0,37,0" Grid.Row="2" VerticalAlignment="Center" Grid.ColumnSpan="6"
+                              ItemsSource="{Binding GRUPOs}"
+                              SelectedValue="{Binding ESTOQUE.GRUPO.ID, Mode=TwoWay, UpdateSourceTrigger=Default}"  
+                              DisplayMemberPath="NOME" 
+                              SelectedValuePath="ID"
+                              SelectedItem="{Binding ESTOQUE.GRUPO}"
+                              Name="cbb_Grupos"
+                              >
+                        <ComboBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <VirtualizingStackPanel/>
+                            </ItemsPanelTemplate>
+                        </ComboBox.ItemsPanel>
+                    </ComboBox>
+                    <ComboBox Grid.Column="3" Margin="2,0,37,0" Grid.Row="3" VerticalAlignment="Center" Grid.ColumnSpan="6"
+                              ItemsSource="{Binding UNI_MEDIDAs}"
+                              SelectedValue="{Binding ESTOQUE.UNI_MEDIDA.ABREVIATURA, Mode=TwoWay}"  
+                              DisplayMemberPath="ABREVIATURA" 
+                              SelectedValuePath="ABREVIATURA"
+                              SelectedItem="{Binding ESTOQUE.UNI_MEDIDA}"
+                              >
+                        <ComboBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <VirtualizingStackPanel/>
+                            </ItemsPanelTemplate>
+                        </ComboBox.ItemsPanel>
+                    </ComboBox>
+                    <ComboBox Grid.Column="3" Margin="2,0,37,0" Grid.Row="4" VerticalAlignment="Center" Grid.ColumnSpan="6"
+                              ItemsSource="{Binding FORNECEDORs}"
+                              SelectedValue="{Binding ESTOQUE.FORNECEDOR_PREFERENCIAL.ID, Mode=TwoWay}"  
+                              DisplayMemberPath="NOME" 
+                              SelectedValuePath="ID"
+                              SelectedItem="{Binding ESTOQUE.FORNECEDOR_PREFERENCIAL}"
+                              >
+                        <ComboBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <VirtualizingStackPanel/>
+                            </ItemsPanelTemplate>
+                        </ComboBox.ItemsPanel>
+                    </ComboBox>
+                    <ComboBox Grid.Column="3" Margin="2,0,37,0" Grid.Row="5" VerticalAlignment="Center" Grid.ColumnSpan="6"
+                              ItemsSource="{Binding TAXA_UFs}"
+                              SelectedValue="{Binding ESTOQUE.TAXA_UF.TAXA_ID, Mode=TwoWay}"  
+                              DisplayMemberPath="DESCRICAO" 
+                              SelectedValuePath="TAXA_ID"
+                              SelectedItem="{Binding ESTOQUE.TAXA_UF}"
+                              >
+                        <ComboBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <VirtualizingStackPanel/>
+                            </ItemsPanelTemplate>
+                        </ComboBox.ItemsPanel>
+                    </ComboBox>
+                    <ComboBox Grid.Column="3" Margin="2,0,37,0" Grid.Row="6" VerticalAlignment="Center" Grid.ColumnSpan="6"
+                              ItemsSource="{Binding TAXA_UFs}"
+                              SelectedValue="{Binding ESTOQUE.TAXA_UF_CFE.TAXA_ID, Mode=TwoWay}"  
+                              DisplayMemberPath="DESCRICAO" 
+                              SelectedValuePath="TAXA_ID"
+                              SelectedItem="{Binding ESTOQUE.TAXA_UF_CFE}"
+                              >
+                        <ComboBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <VirtualizingStackPanel/>
+                            </ItemsPanelTemplate>
+                        </ComboBox.ItemsPanel>
+                    </ComboBox>
+                    <Button Content="@" Grid.Column="8" Grid.Row="2" Margin="5,0,5,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" TabIndex="4" Click="CadastroGrupo"/>
+                    <Button Content="@" Grid.Column="8" Grid.Row="3" Margin="5,0,5,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" TabIndex="4" Click="CadastroUnimedida"/>
+                    <Button Content="⚖" Grid.Column="7" Grid.Row="7" Margin="5,0,5,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" TabIndex="4" Visibility="{Binding IsProduto}" Click="GeraCodigoBalanca"/>
+                    <Button Content="⚖" Grid.Column="4" Grid.Row="13" Margin="5,0,5,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" TabIndex="4" Visibility="{Binding IsProduto}"/>
+                    <Button Content="⚖" Grid.Column="8" Grid.Row="13" Margin="5,0,5,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" TabIndex="4" Visibility="{Binding IsProduto}"/>
+                    <Button Content="%" Grid.Column="20" Grid.Row="2" Margin="5,0,5,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" TabIndex="4" Click="CalculaPrecoVenda"/>
+                    <Button Content="$" Grid.Column="14" Grid.Row="3" Margin="5,0,5,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" TabIndex="4" Click="ConverteEmDolar"/>
+                    <TextBlock Text="Preço em R$:" HorizontalAlignment="Right" Grid.Row="2" Grid.Column="10" Grid.ColumnSpan="2" VerticalAlignment="Center" Margin="2,0,0,0"/>
+                    <TextBlock Text="% Lucro Bruto" HorizontalAlignment="Right" Grid.Row="2" Grid.Column="15" Grid.ColumnSpan="3" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                    <TextBlock Text="% Comissão" HorizontalAlignment="Right" Grid.Row="3" Grid.Column="16" Grid.ColumnSpan="2" VerticalAlignment="Center" Margin="8,0,0,0"/>
+                    <TextBlock Text="Preço em US$:" HorizontalAlignment="Right" Grid.Row="3" Grid.Column="9" Grid.ColumnSpan="3" VerticalAlignment="Center" Margin="33,0,0,0"/>
+                    <controls:CurrencyBox Value="{Binding ESTOQUE.PRECO_DOLAR, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Country="en-US" Grid.Column="12" Margin="2,0,0,0" Grid.Row="3" VerticalAlignment="Center" Grid.ColumnSpan="2" MaxLength="2" Height="21.96"/>
+                    <controls:CurrencyBox x:Name="txb_PrecoVenda" Value="{Binding PrecoVenda, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Column="12" Margin="2,0,0,0" Grid.Row="2" VerticalAlignment="Center" Grid.ColumnSpan="2"  Height="21.96"/>
+                    <controls:CurrencyBox Grid.Column="12" Margin="2,0,0,0" Grid.Row="4" Value="{Binding ESTOQUE.PRECO_ATACADO}" VerticalAlignment="Center" Grid.ColumnSpan="2"  Height="21.96"/>
+                    <currencytextboxcontrol:CurrencyTextBox StringFormat="N2" Number="{Binding ESTOQUE.QTD_ATACADO}" Grid.Column="12" Margin="2,0,0,0" Grid.Row="5" VerticalAlignment="Center" Grid.ColumnSpan="2"  Height="21.96"/>
+                    <currencytextboxcontrol:CurrencyTextBox StringFormat="N2" Number="{Binding ESTOQUE.QUANTIDADE}"  Grid.Column="12" Margin="2,0,0,0" Grid.Row="7" VerticalAlignment="Center" Grid.ColumnSpan="2"  Height="21.96" Visibility="{Binding IsProduto}"/>
+                    <controls:CurrencyBox IsEnabled="False" Grid.Column="18" Margin="2,0,0,0" Grid.Row="6" VerticalAlignment="Center" Grid.ColumnSpan="2"  Height="21.96" Visibility="{Binding IsProduto}"/>
+                    <controls:CurrencyBox Value="{Binding ESTOQUE.PRECO_CUSTO, Mode=TwoWay}" Grid.Column="18" Margin="2,0,0,0" Grid.Row="5" VerticalAlignment="Center" Grid.ColumnSpan="2"  Height="21.96" Visibility="{Binding IsProduto}"/>
+                    <currencytextboxcontrol:CurrencyTextBox StringFormat="N2" Number="{Binding ESTOQUE.QTD_MINIMA}"  Grid.Column="12" Margin="2,0,0,0" Grid.Row="8" VerticalAlignment="Center" Grid.ColumnSpan="2"  Height="21.96" Visibility="{Binding IsProduto}"/>
+                    <currencytextboxcontrol:CurrencyTextBox StringFormat="N2" Number="{Binding ESTOQUE.QTD_RESERVA}"  Grid.Column="12" Margin="2,0,0,0" Grid.Row="9" VerticalAlignment="Center" Grid.ColumnSpan="2"  Height="21.96" Visibility="{Binding IsProduto}"/>
+                    <currencytextboxcontrol:CurrencyTextBox StringFormat="N2" Number="{Binding ESTOQUE.PESO}"  Grid.Column="12" Margin="2,0,0,0" Grid.Row="10" VerticalAlignment="Center" Grid.ColumnSpan="2"  Height="21.96" Visibility="{Binding IsProduto}"/>
+                    <currencytextboxcontrol:CurrencyTextBox StringFormat="P0" x:Name="txb_Lucro" Number="{Binding LucroBruto, Mode=TwoWay, UpdateSourceTrigger=Explicit}" Grid.Column="18" Margin="2,0,0,0" Grid.Row="2" VerticalAlignment="Center" Grid.ColumnSpan="2" Height="21.96"/>
+                    <controls:CurrencyBox Value="{Binding ESTOQUE.PORCEM_COMISSAO_PRODUTO}"  Grid.Column="18" Margin="2,0,0,0" Grid.Row="3" VerticalAlignment="Center" Grid.ColumnSpan="2" Height="21.96"/>
+                    <GroupBox Visibility="{Binding IsProduto}"  Header="Cód. Sit. Trib. - NFe (Contribuinte)" Grid.Row="9" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="7" VerticalContentAlignment="Center">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Visibility="{Binding IsProduto}">
+                            <TextBlock Text="CST NFe" VerticalAlignment="Center" Visibility="{Binding IsProduto}"/>
+                            <ComboBox Margin="2,0,15,0" VerticalAlignment="Center"
+                              ItemsSource="{Binding CSTs}"
+                              SelectedValue="{Binding ESTOQUE.CST_NFE.COD_CST, Mode=TwoWay}"  
+                              DisplayMemberPath="COD_CST" 
+                              SelectedValuePath="COD_CST"
+                              SelectedItem="{Binding ESTOQUE.CST_NFE}"
+                                      Width="60" Visibility="{Binding IsProduto}"
+                              >
+                                <ComboBox.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <VirtualizingStackPanel/>
+                                    </ItemsPanelTemplate>
+                                </ComboBox.ItemsPanel>
+                            </ComboBox>
+                            <TextBlock Text="CSOSN NFe" VerticalAlignment="Center" Visibility="{Binding IsProduto}"/>
+                            <ComboBox Margin="2,0,0,0" VerticalAlignment="Center"
+                              ItemsSource="{Binding CSOSNs}"
+                              SelectedValue="{Binding ESTOQUE.CSOSN_NFE.CSOSN_COD, Mode=TwoWay}"  
+                              DisplayMemberPath="CSOSN_COD" 
+                              SelectedValuePath="CSOSN_COD"
+                              SelectedItem="{Binding ESTOQUE.CSOSN_NFE}"
+                                      Width="60" Visibility="{Binding IsProduto}"
+                              >
+                                <ComboBox.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <VirtualizingStackPanel/>
+                                    </ItemsPanelTemplate>
+                                </ComboBox.ItemsPanel>
+                            </ComboBox>
+
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox Header="Cód. Sit. Trib. - CFe e NFe (Não Contrib.)" Grid.Row="11" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="7" VerticalContentAlignment="Center" Visibility="{Binding IsProduto}">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Visibility="{Binding IsProduto}">
+                            <TextBlock Text="CST CFe" VerticalAlignment="Center" Visibility="{Binding IsProduto}"/>
+                            <ComboBox Margin="2,0,15,0" VerticalAlignment="Center"
+                              ItemsSource="{Binding CSTs}"
+                              SelectedValue="{Binding ESTOQUE.CST_CFE.COD_CST, Mode=TwoWay}"  
+                              DisplayMemberPath="COD_CST" 
+                              SelectedValuePath="COD_CST"
+                              SelectedItem="{Binding ESTOQUE.CST_CFE}"
+                                      Width="60" Visibility="{Binding IsProduto}"
+                              >
+                                <ComboBox.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <VirtualizingStackPanel/>
+                                    </ItemsPanelTemplate>
+                                </ComboBox.ItemsPanel>
+                            </ComboBox>
+                            <TextBlock Text="CSOSN CFe" VerticalAlignment="Center" Visibility="{Binding IsProduto}"/>
+                            <ComboBox Margin="2,0,0,0" VerticalAlignment="Center"
+                              ItemsSource="{Binding CSOSNs}"
+                              SelectedValue="{Binding ESTOQUE.CSOSN_CFE.CSOSN_COD, Mode=TwoWay}"  
+                              DisplayMemberPath="CSOSN_COD" 
+                              SelectedValuePath="CSOSN_COD"
+                              SelectedItem="{Binding ESTOQUE.CSOSN_CFE}"
+                                      Width="60" Visibility="{Binding IsProduto}"
+                              >
+                                <ComboBox.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <VirtualizingStackPanel/>
+                                    </ItemsPanelTemplate>
+                                </ComboBox.ItemsPanel>
+                            </ComboBox>
+
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox Visibility="{Binding IsProduto}" Grid.Row="11" Grid.Column="10" Grid.RowSpan="5" Grid.ColumnSpan="5" Header="IPI">
+                        <Grid Visibility="{Binding IsProduto}">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <ComboBox Margin="10,0,10,0" VerticalAlignment="Center"
+                              ItemsSource="{Binding GRUPOs}"
+                              SelectedValue="{Binding ESTOQUE.GRUPO.ID, Mode=TwoWay}"  
+                              DisplayMemberPath="NOME" 
+                              SelectedValuePath="ID"
+                              SelectedItem="{Binding ESTOQUE.GRUPO}"
+                              Grid.Row="0" Grid.ColumnSpan="2" Visibility="{Binding IsProduto}"
+                              >
+                                <ComboBox.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <VirtualizingStackPanel/>
+                                    </ItemsPanelTemplate>
+                                </ComboBox.ItemsPanel>
+                            </ComboBox>
+                            <TextBlock Grid.Row="1" Text="% IPI" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,10,0" Visibility="{Binding IsProduto}"/>
+                            <TextBlock Grid.Row="2" Text="CST IPI" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,10,0" Visibility="{Binding IsProduto}"/>
+                            <TextBlock Grid.Row="3" Text="CENQ" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,10,0" Visibility="{Binding IsProduto}"/>
+                            <TextBlock Grid.Row="4" Text="Exc. Fiscal" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,10,0" Visibility="{Binding IsProduto}"/>
+                            <currencytextboxcontrol:CurrencyTextBox StringFormat="P2" Number="0" Grid.Row="1" Grid.Column="1" Height="21.96" Visibility="{Binding IsProduto}"/>
+                            <ComboBox VerticalAlignment="Center"
+                              ItemsSource="{Binding GRUPOs}"
+                              SelectedValue="{Binding ESTOQUE.GRUPO.ID, Mode=TwoWay}"  
+                              DisplayMemberPath="NOME" 
+                              SelectedValuePath="ID"
+                              SelectedItem="{Binding ESTOQUE.GRUPO}"
+                              Grid.Row="2" Grid.ColumnSpan="1" Grid.Column="1" Visibility="{Binding IsProduto}"
+                              >
+                                <ComboBox.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <VirtualizingStackPanel/>
+                                    </ItemsPanelTemplate>
+                                </ComboBox.ItemsPanel>
+                            </ComboBox>
+                            <ComboBox VerticalAlignment="Center"
+                              ItemsSource="{Binding GRUPOs}"
+                              SelectedValue="{Binding ESTOQUE.GRUPO.ID, Mode=TwoWay}"  
+                              DisplayMemberPath="NOME" 
+                              SelectedValuePath="ID"
+                              SelectedItem="{Binding ESTOQUE.GRUPO}"
+                              Grid.Row="3" Grid.ColumnSpan="1" Grid.Column="1" Visibility="{Binding IsProduto}"
+                              >
+                                <ComboBox.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <VirtualizingStackPanel/>
+                                    </ItemsPanelTemplate>
+                                </ComboBox.ItemsPanel>
+                            </ComboBox>
+                            <TextBox Grid.Row="4" Grid.Column="1" Height="21.96" Visibility="{Binding IsProduto}"/>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Adicionais/Observações">
+                <TabItem.Resources>
+                    <ObjectDataProvider x:Key="PIS_COFINS_ENUM" MethodName="GetValues" ObjectType="{x:Type sys:Enum}">
+                        <ObjectDataProvider.MethodParameters>
+                            <x:Type TypeName="enums:CST_PIS_COFINS"/>
+                        </ObjectDataProvider.MethodParameters>
+                    </ObjectDataProvider>
+                </TabItem.Resources>
+                <Grid Margin="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="% COFINS: " HorizontalAlignment="Right" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center" Margin="17,0,0,0"/>
+                    <currencytextboxcontrol:CurrencyTextBox StringFormat="P0" Number="{Binding ESTOQUE.COFINS}" Grid.Column="3" Margin="2,0,0,0" Grid.Row="0" VerticalAlignment="Center" Grid.ColumnSpan="2" Height="21.96"/>
+                    <TextBlock Text="% PIS: " HorizontalAlignment="Right" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center" Margin="17,0,0,0"/>
+                    <currencytextboxcontrol:CurrencyTextBox StringFormat="P0" Number="{Binding ESTOQUE.PIS}" Grid.Column="3" Margin="2,0,0,0" Grid.Row="1" VerticalAlignment="Center" Grid.ColumnSpan="2" Height="21.96"/>
+                    <TextBlock Text="CST COFINS: " HorizontalAlignment="Right" Grid.Row="0" Grid.Column="5" Grid.ColumnSpan="2" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                    <ComboBox Margin="2,0,0,0" VerticalAlignment="Center" Grid.Column="7" Grid.ColumnSpan="2"
+                              ItemsSource="{Binding Mode=OneWay, Source={StaticResource PIS_COFINS_ENUM}}"
+                              SelectedItem="{Binding ESTOQUE.COD_SUBSTITUICAO_TRIBUTARIA_COFINS}" Visibility="{Binding IsProduto}"
+                              >
+                        <ComboBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <VirtualizingStackPanel/>
+                            </ItemsPanelTemplate>
+                        </ComboBox.ItemsPanel>
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Converter={StaticResource enumDescriptionConverter}}"/>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+
+                    <TextBlock Text="Data de Cadastro: " HorizontalAlignment="Right" Grid.Row="0" Grid.Column="9" Grid.ColumnSpan="3" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                    <TextBox Grid.Column="12" Margin="2,0,0,0" Grid.Row="0" Text="{Binding ESTOQUE.DATA_CADASTRO, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, StringFormat=dd/MM/yyyy}" VerticalAlignment="Center" Grid.ColumnSpan="2" Height="21.96"/>
+                    <TextBlock Text="Último Fornecedor: " HorizontalAlignment="Right" Grid.Row="1" Grid.Column="9" Grid.ColumnSpan="3" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                    <TextBox IsReadOnly="True" Grid.Column="12" Margin="2,0,0,0" Grid.Row="1" Text="{Binding ESTOQUE.ULTIMO_FORNECEDOR.NOME_JURIDICO, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Grid.ColumnSpan="8" Height="21.96"/>
+                    <TextBlock Text="Última Compra: " HorizontalAlignment="Right" Grid.Row="2" Grid.Column="9" Grid.ColumnSpan="3" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                    <TextBox Grid.Column="12" Margin="2,0,0,0" Grid.Row="2" Text="{Binding ULTIMA_COMPRA, Mode=OneWay, UpdateSourceTrigger=PropertyChanged, StringFormat=dd/MM/yyyy}" VerticalAlignment="Center" Grid.ColumnSpan="2" Height="21.96"/>
+                    <TextBlock Text="Última Venda: " HorizontalAlignment="Right" Grid.Row="2" Grid.Column="14" Grid.ColumnSpan="3" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                    <TextBox Grid.Column="17" Margin="2,0,0,0" Grid.Row="2" Text="{Binding ESTOQUE.ULTIMA_VENDA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, StringFormat=dd/MM/yyyy}" VerticalAlignment="Center" Grid.ColumnSpan="2" Height="21.96"/>
+                    <TextBlock Text="Taxa ICMS Partilha: " HorizontalAlignment="Right" Grid.Row="3" Grid.Column="9" Grid.ColumnSpan="3" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                    <ComboBox Grid.Column="12" Margin="2,0,37,0" Grid.Row="3" VerticalAlignment="Center" Grid.ColumnSpan="6"
+                              ItemsSource="{Binding TAXA_UFs}"
+                              SelectedValue="{Binding ESTOQUE.TAXA_ICMS_PART.TAXA_ID, Mode=TwoWay}"  
+                              DisplayMemberPath="DESCRICAO" 
+                              SelectedValuePath="ID"
+                              SelectedItem="{Binding ESTOQUE.TAXA_ICMS_PART}"
+                              >
+                        <ComboBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <VirtualizingStackPanel/>
+                            </ItemsPanelTemplate>
+                        </ComboBox.ItemsPanel>
+                    </ComboBox>
+                    <TextBlock Text="Taxa FCP: " HorizontalAlignment="Right" Grid.Row="4" Grid.Column="9" Grid.ColumnSpan="3" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                    <ComboBox Grid.Column="12" Margin="2,0,37,0" Grid.Row="4" VerticalAlignment="Center" Grid.ColumnSpan="6"
+                              ItemsSource="{Binding TAXA_UFs}"
+                              SelectedValue="{Binding ESTOQUE.TAXA_ICMS_FCP.TAXA_ID, Mode=TwoWay}"  
+                              DisplayMemberPath="DESCRICAO" 
+                              SelectedValuePath="ID"
+                              SelectedItem="{Binding ESTOQUE.TAXA_ICMS_FCP}"
+                              >
+                        <ComboBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <VirtualizingStackPanel/>
+                            </ItemsPanelTemplate>
+                        </ComboBox.ItemsPanel>
+                    </ComboBox>
+                    <TextBlock Foreground="Gray" Text="FCI: " HorizontalAlignment="Right" Grid.Row="5" Grid.Column="9" Grid.ColumnSpan="3" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                    <TextBox IsEnabled="False" Grid.Column="12" Margin="2,0,0,0" Grid.Row="5" Text="{Binding ESTOQUE.DESCRICAO, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Grid.ColumnSpan="2" Height="21.96"/>
+                    <TextBlock Foreground="Gray" Text="Código ANP: " HorizontalAlignment="Right" Grid.Row="6" Grid.Column="9" Grid.ColumnSpan="3" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                    <TextBox IsEnabled="False" Grid.Column="12" Margin="2,0,0,0" Grid.Row="6" Text="{Binding ESTOQUE.DESCRICAO, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Grid.ColumnSpan="2" Height="21.96"/>
+                    <Border Grid.Row="7" Grid.Column="15" Grid.RowSpan="4" Grid.ColumnSpan="4" Margin="2" BorderThickness="0.5" BorderBrush="Black">
+                        <Grid>
+                            <TextBlock Panel.ZIndex="1" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center">
+                                <Run>Clique duas vezes para</Run><LineBreak/><Run>inserir uma foto</Run>
+                            </TextBlock>
+                            <Border Panel.ZIndex="2" Background="White">
+                                <Image Source="/daffy.png"/>
+                            </Border>
+                        </Grid>
+                    </Border>
+
+
+                    <TextBlock Text="CST PIS: " HorizontalAlignment="Right" Grid.Row="1" Grid.Column="5" Grid.ColumnSpan="2" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                    <ComboBox Margin="2,0,0,0" VerticalAlignment="Center" Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="1"
+                              ItemsSource="{Binding Mode=OneWay, Source={StaticResource PIS_COFINS_ENUM}}"
+                              SelectedItem="{Binding ESTOQUE.COD_SUBSTITUICAO_TRIBUTARIA_PIS}" Visibility="{Binding IsProduto}"
+                              >
+                        <ComboBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <VirtualizingStackPanel/>
+                            </ItemsPanelTemplate>
+                        </ComboBox.ItemsPanel>
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Converter={StaticResource enumDescriptionConverter}}"/>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                    <TextBlock Text="Natureza da Receita: " HorizontalAlignment="Right" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                    <TextBox Grid.Column="3" Margin="2,0,0,0" Grid.Row="2" Text="{Binding ESTOQUE.DESCRICAO, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Grid.ColumnSpan="2" Height="21.96"/>
+                    <TextBlock Text="% MVA: " ToolTip="Essa informação deverá ser provida pelo contador." HorizontalAlignment="Right" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                    <currencytextboxcontrol:CurrencyTextBox StringFormat="P0" Number="{Binding ESTOQUE.MVA}" Grid.Column="3" Margin="2,0,0,0" Grid.Row="3" VerticalAlignment="Center" Grid.ColumnSpan="2" Height="21.96"/>
+                    <TextBlock Text="Cód. Benefic.: " HorizontalAlignment="Right" Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="3" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                    <TextBox Grid.Column="7" Margin="2,0,0,0" Grid.Row="2" Text="{Binding ESTOQUE.DESCRICAO, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Grid.ColumnSpan="2" Height="21.96"/>
+                    <TextBlock Foreground="Gray" Text="% ICMS Efetivo" HorizontalAlignment="Right" Grid.Row="3" Grid.Column="4" Grid.ColumnSpan="3" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                    <currencytextboxcontrol:CurrencyTextBox IsEnabled="False" StringFormat="P0" Number="0" Grid.Column="7" Margin="2,0,0,0" Grid.Row="3" VerticalAlignment="Center" Grid.ColumnSpan="2" Height="21.96"/>
+                    <TextBlock Text="CFOP CFE: " HorizontalAlignment="Right" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                    <ComboBox Grid.Column="3" Margin="2,0,2,0" Grid.Row="4" VerticalAlignment="Center" Grid.ColumnSpan="6"
+                              ItemsSource="{Binding CFOPs}"
+                              SelectedValue="{Binding ESTOQUE.CFOP_CFE, Mode=TwoWay, UpdateSourceTrigger=Default}"  
+                              SelectedValuePath="{Binding ESTOQUE.CFOP_CFE.CFOP}"
+                              SelectedItem="{Binding ESTOQUE.CFOP_CFE}"
+                              >
+                        <ComboBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <VirtualizingStackPanel/>
+                            </ItemsPanelTemplate>
+                        </ComboBox.ItemsPanel>
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal" Margin="0">
+                                    <Border Padding="0,0,2,0" BorderThickness="1" BorderBrush="LightGray">
+                                        <TextBlock>
+                                    <Run Text="{Binding CFOP}"/>
+                                        </TextBlock>
+                                    </Border>
+                                    <Border Padding="2,0,0,0" BorderThickness="1" BorderBrush="LightGray">
+                                        <TextBlock>
+                                    <Run Text="{Binding DESCRICAO}"/>
+                                        </TextBlock>
+                                    </Border>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+
+                    <TextBlock Text="CFOP NF: " HorizontalAlignment="Right" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                    <ComboBox Grid.Column="3" Margin="2,0,2,0" Grid.Row="5" VerticalAlignment="Center" Grid.ColumnSpan="6"
+                              ItemsSource="{Binding CFOPs}"
+                              SelectedValue="{Binding ESTOQUE.CFOP_NF, Mode=TwoWay, UpdateSourceTrigger=Default}"  
+                              SelectedValuePath="{Binding ESTOQUE.CFOP_NF.CFOP}"
+                              SelectedItem="{Binding ESTOQUE.CFOP_NF}"
+                              >
+                        <ComboBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <VirtualizingStackPanel/>
+                            </ItemsPanelTemplate>
+                        </ComboBox.ItemsPanel>
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal" Margin="0">
+                                    <Border Padding="0,0,2,0" BorderThickness="1" BorderBrush="LightGray">
+                                        <TextBlock>
+                                    <Run Text="{Binding CFOP}"/>
+                                        </TextBlock>
+                                    </Border>
+                                    <Border Padding="2,0,0,0" BorderThickness="1" BorderBrush="LightGray">
+                                        <TextBlock>
+                                    <Run Text="{Binding DESCRICAO}"/>
+                                        </TextBlock>
+                                    </Border>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                    <TextBlock Text="IAT: " HorizontalAlignment="Right" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="3" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                    <ComboBox IsEnabled="False" IsReadOnly="True" Grid.Column="3" Margin="2,0,2,0" Grid.Row="6" VerticalAlignment="Center" Grid.ColumnSpan="2"
+                              ItemsSource="{Binding CFOPs}"
+                              SelectedValuePath="{Binding ESTOQUE.CFOP_NF.CFOP}"
+                              >
+                        <ComboBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <VirtualizingStackPanel/>
+                            </ItemsPanelTemplate>
+                        </ComboBox.ItemsPanel>
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal" Margin="0">
+                                    <Border Padding="0,0,2,0" BorderThickness="1" BorderBrush="LightGray">
+                                        <TextBlock>
+                                    <Run Text="{Binding CFOP}"/>
+                                        </TextBlock>
+                                    </Border>
+                                    <Border Padding="2,0,0,0" BorderThickness="1" BorderBrush="LightGray">
+                                        <TextBlock>
+                                    <Run Text="{Binding DESCRICAO}"/>
+                                        </TextBlock>
+                                    </Border>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                    <TextBlock Text="IPPT: " HorizontalAlignment="Right" Grid.Row="6" Grid.Column="4" Grid.ColumnSpan="3" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                    <ComboBox IsEnabled="False" IsReadOnly="True" Grid.Column="7" Margin="2,0,2,0" Grid.Row="6" VerticalAlignment="Center" Grid.ColumnSpan="2"
+                              ItemsSource="{Binding CFOPs}"
+                              SelectedValuePath="{Binding ESTOQUE.CFOP_NF.CFOP}"
+                              >
+                        <ComboBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <VirtualizingStackPanel/>
+                            </ItemsPanelTemplate>
+                        </ComboBox.ItemsPanel>
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal" Margin="0">
+                                    <Border Padding="0,0,2,0" BorderThickness="1" BorderBrush="LightGray">
+                                        <TextBlock>
+                                    <Run Text="{Binding CFOP}"/>
+                                        </TextBlock>
+                                    </Border>
+                                    <Border Padding="2,0,0,0" BorderThickness="1" BorderBrush="LightGray">
+                                        <TextBlock>
+                                    <Run Text="{Binding DESCRICAO}"/>
+                                        </TextBlock>
+                                    </Border>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                    <TextBlock Text="Obs: " HorizontalAlignment="Right" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="3" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                    <TextBox Grid.Column="3" Margin="2" Grid.Row="7" AcceptsReturn="True" TextWrapping="Wrap" Text="{Binding ESTOQUE.DESCRICAO, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Stretch" Grid.ColumnSpan="12" Grid.RowSpan="4"/>
+                    <TextBlock Text="CAMPO1: " HorizontalAlignment="Right" Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="3" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                    <TextBox Grid.Column="3" Margin="2,0,0,0" Grid.Row="11" Text="{Binding ESTOQUE.CAMPO1}" VerticalAlignment="Center" Grid.ColumnSpan="5" Height="21.96"/>
+                    <TextBlock Text="CAMPO2: " HorizontalAlignment="Right" Grid.Row="11" Grid.Column="7" Grid.ColumnSpan="3" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                    <TextBox Grid.Column="10" Margin="2,0,0,0" Grid.Row="11" Text="{Binding ESTOQUE.CAMPO2}" VerticalAlignment="Center" Grid.ColumnSpan="5" Height="21.96"/>
+                    <TextBlock Text="Ind. Escala: " HorizontalAlignment="Right" Grid.Row="12" Grid.Column="0" Grid.ColumnSpan="3" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                    <ComboBox IsEnabled="False" IsReadOnly="True" Grid.Column="3" Margin="2,0,2,0" Grid.Row="12" VerticalAlignment="Center" Grid.ColumnSpan="4"
+                              ItemsSource="{Binding CFOPs}"
+                              SelectedValuePath="{Binding ESTOQUE.CFOP_NF.CFOP}"
+                              >
+                        <ComboBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <VirtualizingStackPanel/>
+                            </ItemsPanelTemplate>
+                        </ComboBox.ItemsPanel>
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal" Margin="0">
+                                    <Border Padding="0,0,2,0" BorderThickness="1" BorderBrush="LightGray">
+                                        <TextBlock>
+                                    <Run Text="{Binding CFOP}"/>
+                                        </TextBlock>
+                                    </Border>
+                                    <Border Padding="2,0,0,0" BorderThickness="1" BorderBrush="LightGray">
+                                        <TextBlock>
+                                    <Run Text="{Binding DESCRICAO}"/>
+                                        </TextBlock>
+                                    </Border>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                    <TextBlock Foreground="Gray" Text="% Alíquota Interna: " HorizontalAlignment="Right" Grid.Row="13" Grid.Column="0" Grid.ColumnSpan="3" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                    <TextBox IsEnabled="False" Grid.Column="3" Margin="2,0,0,0" Grid.Row="13" Text="" VerticalAlignment="Center" Grid.ColumnSpan="2" Height="21.96"/>
+                    <TextBlock ForceCursor="False" Text="CNPJ Fabricante: " HorizontalAlignment="Right" Grid.Row="12" Grid.Column="7" Grid.ColumnSpan="3" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                    <TextBox IsEnabled="False" Grid.Column="10" Margin="2,0,0,0" Grid.Row="12" Text="" VerticalAlignment="Center" Grid.ColumnSpan="5" Height="21.96"/>
+
+                </Grid>
+
+            </TabItem>
+            <TabItem Header="Lotes" IsEnabled="False"/>
+        </TabControl>
+        <Grid Grid.Row="1" VerticalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Margin="2" Content="Histórico"/>
+            <Button Grid.Column="1" Margin="2" Content="Fornecedor"/>
+
+            <Button Grid.Column="3" Margin="2" Content="Anterior"/>
+            <Button Grid.Column="4" Margin="2" Content="Próximo"/>
+
+            <Button Grid.Column="6" Margin="2" Content="Cancelar" Click="Cancelar_Click"/>
+            <Button Grid.Column="7" Margin="2" Content="OK" Click="OK_Click"/>
+
+        </Grid>
+    </Grid>
+
+</Window>

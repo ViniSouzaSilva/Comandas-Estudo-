@@ -1,0 +1,53 @@
+﻿<Window x:Class="AmbiPDV.Views.DESCONTOView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:currencytextboxcontrol="clr-namespace:CurrencyTextBoxControl;assembly=CurrencyTextbox"
+        xmlns:controls="clr-namespace:AmbiPDV.Controls"
+        xmlns:viewModels="clr-namespace:AmbiPDV.ViewModels"
+        xmlns:local="clr-namespace:AmbiPDV.Views"
+        mc:Ignorable="d"
+        Title="DESCONTOView" 
+        KeyDown="Window_KeyDown"
+        Height="244" Width="380" Background="{x:Null}" WindowStyle="None" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" AllowsTransparency="True">
+    <Window.DataContext>
+        <viewModels:DESCONTOViewModel/>
+    </Window.DataContext>
+    <Border Background="#FFF0F0F0" Margin="10" CornerRadius="10">
+        <Border.Effect>
+            <DropShadowEffect ShadowDepth="1.5" Opacity="0.65" Direction="300" BlurRadius="8"/>
+        </Border.Effect>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Digite o desconto" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Foreground="#FF4D4D4D" FontSize="26" FontFamily="Open Sans" Margin="0,15,0,0" Grid.ColumnSpan="2"/>
+            <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">
+                <Border Width="36" Height="36" Background="#FF09CAAA">
+                    <Label Content="%" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Open Sans" FontSize="24" Padding="3,0,0,0" Foreground="#FFF0F0F0" Margin="-1,0,1,0"/>
+                </Border>
+                <currencytextboxcontrol:CurrencyTextBox Number="{Binding PORCENTAGEM, Mode=TwoWay}" StringFormat="P0" x:Name="txb_Porc" Width="106" FontSize="22" FontFamily="Open Sans" Margin="-1,0,0,0" Language="pt-BR" Panel.ZIndex="-1" Height="36" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center">
+                <controls:CurrencyBox Value="{Binding DESCONTO_ABSOLUTO, Mode=TwoWay}"  x:Name="txb_Valor" Width="106" FontSize="22" FontFamily="Open Sans" Margin="-1,0,0,0" Language="pt-BR" Panel.ZIndex="-1" Height="36" />
+                <Border Width="36" Height="36" Background="#FF09CAAA">
+                    <Label Content="R$" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Open Sans" FontSize="24" Padding="3,0,0,0" Foreground="#FFF0F0F0" Margin="-1,0,1,0"/>
+                </Border>
+            </StackPanel>
+            <Button Grid.Row="2" TabIndex="3" Background="#FFFF7272" Height="37"  HorizontalAlignment="Center" Margin="10">
+                <Label Content="CANCELAR" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" Foreground="#FFFEFEFE" FontFamily="Open Sans" Width="79"/>
+            </Button>
+            <Button Grid.Row="2" Grid.Column="1" TabIndex="3" Background="#FF09CAAA" Height="37" HorizontalAlignment="Center" Margin="10">
+                <Label Content="CONFIRMAR" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" Foreground="#FFFEFEFE" FontFamily="Open Sans" Width="79"/>
+            </Button>
+        </Grid>
+    </Border>
+
+</Window>

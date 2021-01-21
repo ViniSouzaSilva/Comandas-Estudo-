@@ -1,0 +1,29 @@
+﻿<Window x:Class="AmbiPDV.Views.PERGUNTASENHAView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AmbiPDV.Views"
+        xmlns:viewmodels="clr-namespace:AmbiPDV.ViewModels"
+        mc:Ignorable="d"
+        Title="PERGUNTASenhaView" 
+        Height="184" Width="380" Background="{x:Null}" WindowStyle="None" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" AllowsTransparency="True">
+    <Window.DataContext>
+        <viewmodels:PERGUNTASENHAViewModel/>
+    </Window.DataContext>
+    <Border Background="#FFF0F0F0" Margin="10" CornerRadius="10">
+        <Border.Effect>
+            <DropShadowEffect ShadowDepth="1.5" Opacity="0.65" Direction="300" BlurRadius="8"/>
+        </Border.Effect>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Content="{Binding TITULO}" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF4D4D4D" FontSize="26" FontFamily="Open Sans"/>
+            <Label Content="{Binding SUBTITULO}" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF4D4D4D" FontSize="22" FontFamily="Open Sans" Grid.Row="1"/>
+            <PasswordBox x:Name="txb_Password" FontSize="22" FontFamily="Open Sans" Margin="25,0" Height="36" Grid.Row="2" KeyDown="txb_Porc_KeyDown"/>
+        </Grid>
+    </Border>
+</Window>

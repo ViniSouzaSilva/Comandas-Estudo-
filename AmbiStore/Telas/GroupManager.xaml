@@ -1,0 +1,42 @@
+﻿<Window x:Class="AmbiStore.Telas.GroupManager"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AmbiStore.Telas"
+        xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+        
+        mc:Ignorable="d"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource MaterialDesignPaper}"
+        Title="GroupManager" Height="450" Width="800">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ToggleButton.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <md:DrawerHost LeftDrawerBackground="White" Background="White" BottomDrawerBackground="White" RightDrawerBackground="White" TopDrawerBackground="White">
+            <md:DrawerHost.LeftDrawerContent>
+                <StackPanel Width="200" >
+                    <TextBlock Text="Configurações" HorizontalAlignment="Center" FontFamily="Arial" FontSize="18" FontWeight="Bold"/>
+                    <Button x:Name="Certificado_btn" Content="Certificado" Margin="0,15,0,0" Height="38" Click="Certificado_btn_Click"></Button>
+                    <Button x:Name="Grupos_btn" Content="Grupos/Empresas" Margin="0,10,0,0" Height="38" Click="Grupos_btn_Click"></Button>
+                </StackPanel>
+            </md:DrawerHost.LeftDrawerContent>
+
+
+
+
+            
+        </md:DrawerHost>
+
+        <md:PackIcon x:Name="Icone" Height="150" Width="150" Kind="Error" Margin="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="Black" Foreground="#FFE80404" Background="{DynamicResource MaterialDesignPaper}" MouseDoubleClick="Icone_MouseDoubleClick"/>
+        <Button x:Name="AddCertificado_btn" Content="Retirar Certificado" Margin="0,250,0,0" Height="50" Width="100" Visibility="Collapsed"/>
+        <md:PackIcon x:Name="Icone_ok" Height="150" Width="150" Kind="Pokeball" Margin="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="Black" Foreground="#FF148137" Background="{DynamicResource MaterialDesignPaper}" Visibility="Collapsed"/>
+
+
+    </Grid>
+</Window>

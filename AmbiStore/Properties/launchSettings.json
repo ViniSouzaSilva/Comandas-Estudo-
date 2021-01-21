@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "AmbiStore": {
+      "commandName": "Project",
+      "nativeDebugging": false
+    }
+  }
+}

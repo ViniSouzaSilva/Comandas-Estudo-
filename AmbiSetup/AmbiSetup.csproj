@@ -1,0 +1,77 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Platforms>AnyCPU;x64</Platforms>
+    <LangVersion>preview</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Telas\EULA.xaml~RF152ca29.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="MySql.Data" Version="8.0.21" />
+    <PackageReference Include="Ookii.Dialogs.Wpf.NETCore" Version="2.1.0" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.1.1" />
+    <PackageReference Include="System.IO.Compression" Version="4.3.0" />
+    <PackageReference Include="System.IO.Compression.ZipFile" Version="4.3.0" />
+    <PackageReference Include="System.ServiceProcess.ServiceController" Version="4.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AmbiStore\AmbiStore.csproj" />
+    <ProjectReference Include="..\Shared\Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Fonts\FiraSans-Black.ttf" />
+    <Resource Include="Fonts\FiraSans-BlackItalic.ttf" />
+    <Resource Include="Fonts\FiraSans-Bold.ttf" />
+    <Resource Include="Fonts\FiraSans-BoldItalic.ttf" />
+    <Resource Include="Fonts\FiraSans-ExtraBold.ttf" />
+    <Resource Include="Fonts\FiraSans-ExtraBoldItalic.ttf" />
+    <Resource Include="Fonts\FiraSans-ExtraLight.ttf" />
+    <Resource Include="Fonts\FiraSans-ExtraLightItalic.ttf" />
+    <Resource Include="Fonts\FiraSans-Italic.ttf" />
+    <Resource Include="Fonts\FiraSans-Light.ttf" />
+    <Resource Include="Fonts\FiraSans-LightItalic.ttf" />
+    <Resource Include="Fonts\FiraSans-Medium.ttf" />
+    <Resource Include="Fonts\FiraSans-MediumItalic.ttf" />
+    <Resource Include="Fonts\FiraSans-Regular.ttf" />
+    <Resource Include="Fonts\FiraSans-SemiBold.ttf" />
+    <Resource Include="Fonts\FiraSans-SemiBoldItalic.ttf" />
+    <Resource Include="Fonts\FiraSans-Thin.ttf" />
+    <Resource Include="Fonts\FiraSans-ThinItalic.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Resources\AnyDesk-CM.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\AnyDesk-CM.msi">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\mysql-installer-web-community-8.0.21.0.msi">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Store.pack">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="::&quot;C:\Program Files\7-Zip\7z.exe&quot; a $(ProjectDir)Resources\Store.pack" />
+  </Target>
+  
+</Project>

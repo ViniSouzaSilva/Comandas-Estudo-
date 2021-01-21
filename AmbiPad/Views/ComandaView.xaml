@@ -1,0 +1,234 @@
+﻿<Window x:Class="AmbiPad.Views.ComandaView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:vm="clr-namespace:AmbiPad.ViewModels"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AmbiPad.Views" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="ComandaView" Height="500" Width="800" KeyDown="Window_KeyDown" Background="{DynamicResource MaterialDesignDarkBackground}" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" WindowStyle="None" >
+    <Window.DataContext>
+        <!-- Utilizado para ao iniciar a tela, buscar um data context do tipo abaixo-->
+        <vm:ComandaVM/>
+    </Window.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="14*"/>
+            <RowDefinition Height="14*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="431*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="689*"/>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="21*"/>
+        </Grid.ColumnDefinitions>
+
+        <TabControl Grid.ColumnSpan="7" Style="{StaticResource MaterialDesignTabControl}" Foreground="White" BorderBrush="White" Background="#FFDEDEDE" Grid.RowSpan="5" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">
+
+            <TabItem Header="Comanda"  BorderBrush="{DynamicResource MaterialDesignDarkForeground}" Foreground="White">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10*"/>
+                        <RowDefinition Height="10*"/>
+                        <RowDefinition Height="10*"/>
+                        <RowDefinition Height="10*"/>
+                        <RowDefinition Height="10*"/>
+                        <RowDefinition Height="10*"/>
+                        <RowDefinition Height="10*"/>
+                        <RowDefinition Height="10*"/>
+                        <RowDefinition Height="10*"/>
+                        <RowDefinition Height="10*"/>
+                        <RowDefinition Height="10*"/>
+                        <RowDefinition Height="10*"/>
+                        <RowDefinition Height="10*"/>
+                        <RowDefinition Height="10*"/>
+                        <RowDefinition Height="10*"/>
+                        <RowDefinition Height="10*"/>
+                        <RowDefinition Height="10*"/>
+                        <RowDefinition Height="10*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="44.444"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="44.444"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <materialDesign:Badged Badge="F2" Grid.Row="1" Grid.Column="13" Grid.ColumnSpan="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.RowSpan="2" BadgeBackground="{DynamicResource MaterialDesignDarkBackground}" BadgeForeground="{DynamicResource MaterialDesignDarkForeground}">
+                        <Grid Height="44" Width="176">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="10*"/>
+                                <RowDefinition Height="10*"/>
+                                <RowDefinition Height="10*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="10*"/>
+                            </Grid.ColumnDefinitions>
+                            <Button  x:Name="ExibirComanda_btn"  Content="Exibir comanda" Grid.Column="5" Grid.Row="0" Grid.RowSpan="3" Grid.ColumnSpan="8" Click="ExibirComanda_btn_Click" Background="RoyalBlue" Foreground="#DDFFFFFF"/>
+                        </Grid>
+                    </materialDesign:Badged>
+                    <materialDesign:Badged Badge="F3" Grid.Row="3" Grid.Column="13" Grid.ColumnSpan="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.RowSpan="2" BadgeBackground="{DynamicResource MaterialDesignDarkBackground}" Foreground="Black" BadgeForeground="{DynamicResource MaterialDesignDarkForeground}" BorderBrush="Black">
+                        <Grid Height="44" Width="176">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="10*"/>
+                                <RowDefinition Height="10*"/>
+                                <RowDefinition Height="10*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="10*"/>
+                            </Grid.ColumnDefinitions>
+                            <Button x:Name="SalvarItemComanda_btn" Content="Adiciona item" Grid.Column="10" Grid.RowSpan="3" Grid.ColumnSpan="2" Click="SalvarItemComanda_btn_Click" Grid.Row="0" Background="RoyalBlue" Foreground="#DDF9F9F9"/>
+
+                        </Grid>
+                    </materialDesign:Badged>
+                    <materialDesign:Badged Badge="F5" Grid.Row="5" Grid.Column="13" Grid.ColumnSpan="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.RowSpan="2" BadgeBackground="{DynamicResource MaterialDesignDarkBackground}" Foreground="Black" BadgeForeground="{DynamicResource MaterialDesignDarkForeground}" BorderBrush="Black">
+                        <Grid Height="44" Width="176">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="10*"/>
+                                <RowDefinition Height="10*"/>
+                                <RowDefinition Height="10*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="10*"/>
+                            </Grid.ColumnDefinitions>
+                            <Button x:Name="FecharComanda_btn" Content="Fechar comanda" Grid.Column="10" Grid.RowSpan="3" Grid.ColumnSpan="2" Click="FecharComanda_btn_Click" Grid.Row="0" Background="RoyalBlue" Foreground="#DDF9F9F9"/>
+
+                        </Grid>
+                    </materialDesign:Badged>
+                    <TextBox x:Name="Comanda_txb" Grid.ColumnSpan="4" Grid.Column="1" Grid.Row="1" Text="{Binding ID_COMANDA, UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" Grid.RowSpan="2" KeyDown="Comanda_txb_KeyDown" Background="{x:Null}" BorderBrush="#89FFFFFF" materialDesign:HintAssist.Hint="Comanda" materialDesign:HintAssist.FloatingScale="1" materialDesign:HintAssist.HelperText="Digite o N° comanda" Style="{StaticResource MaterialDesignFloatingHintTextBox}" CaretBrush="{DynamicResource MaterialDesignDarkForeground}" Foreground="{DynamicResource MaterialDesignDarkForeground}"/>
+
+                    <TextBox x:Name="ID_produto_txb" Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="4"  TextWrapping="Wrap" Grid.RowSpan="2" Text="{Binding PRODU, UpdateSourceTrigger=PropertyChanged}" KeyDown="ID_produto_txb_KeyDown" Background="{x:Null}" BorderBrush="{DynamicResource MaterialDesignDarkForeground}" materialDesign:HintAssist.Hint="Produto" materialDesign:HintAssist.FloatingScale="1" materialDesign:HintAssist.HelperText="Digite o N° do produto" Style="{StaticResource MaterialDesignFloatingHintTextBox}" CaretBrush="{DynamicResource MaterialDesignDarkForeground}" Foreground="{DynamicResource MaterialDesignDarkForeground}"/>
+
+                    <TextBox x:Name="Quantidade_txb" Grid.ColumnSpan="3" Grid.Column="5" Grid.Row="4"  TextWrapping="Wrap" Grid.RowSpan="2" Text="" Background="{x:Null}" BorderBrush="{DynamicResource MaterialDesignDarkForeground}" materialDesign:HintAssist.Hint="Quantidade" materialDesign:HintAssist.FloatingScale="1" materialDesign:HintAssist.HelperText="Digite a quantidade produto" Style="{StaticResource MaterialDesignFloatingHintTextBox}" KeyDown="Quantidade_txb_KeyDown" CaretBrush="{DynamicResource MaterialDesignDarkForeground}" Foreground="{DynamicResource MaterialDesignDarkForeground}"/>
+
+                    <TextBox x:Name="Total_txb" Grid.ColumnSpan="3" Grid.Column="9" Grid.Row="4"  TextWrapping="Wrap" Grid.RowSpan="2" Text="" Background="{x:Null}" BorderBrush="{DynamicResource MaterialDesignDarkForeground}" materialDesign:HintAssist.Hint="" materialDesign:HintAssist.FloatingScale="1" materialDesign:HintAssist.HelperText="TOTAL" Style="{StaticResource MaterialDesignFloatingHintTextBox}"  CaretBrush="{DynamicResource MaterialDesignDarkForeground}" Foreground="{DynamicResource MaterialDesignDarkForeground}" IsReadOnly="True"/>
+
+
+                    <DataGrid x:Name="Comanda_grid" Grid.Row="7" Grid.RowSpan="11" Grid.ColumnSpan="16" Grid.Column="1" ItemsSource="{Binding OBJETO_COMANDA,UpdateSourceTrigger=PropertyChanged}" AutoGenerateColumns="False" CanUserAddRows="False" Background="#FFDEDEDE" Foreground="#FF303030" BorderBrush="{DynamicResource MaterialDesignDarkForeground}">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Cod. Produto" Binding="{Binding ESTOQUE.ID}" Width="*"/>
+                            <DataGridTextColumn Header="Descrição" Binding="{Binding ESTOQUE.DESCRICAO}" Width="*"/>
+                            <DataGridTextColumn Header="Quantidade" Binding="{Binding QTD , StringFormat=N2}" Width="*"/>
+                            <DataGridTextColumn Header="Preço Unitário" Binding="{Binding ESTOQUE.PRECO_VENDA,StringFormat=N2}" Width="*"/>
+                            <DataGridTextColumn Header="Preço total" Binding="{Binding VLR_TOTAL,StringFormat=N2}" Width="*"/>
+                        </DataGrid.Columns>
+                        <DataGrid.Resources>
+                            <Style TargetType="DataGridRow">
+
+
+                                <EventSetter Event="MouseDoubleClick" Handler="Row_DoubleClick"/>
+                                <Style.Triggers>
+
+
+
+
+                                </Style.Triggers>
+                            </Style>
+
+                        </DataGrid.Resources>
+                    </DataGrid>
+
+
+                </Grid>
+
+
+
+            </TabItem>
+
+            <TabItem Header="Adicionar">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition Height="21.447"/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+
+                        <ColumnDefinition Width="10*"/>
+                        <ColumnDefinition Width="10*"/>
+                        <ColumnDefinition Width="10*"/>
+                        <ColumnDefinition Width="10*"/>
+                        <ColumnDefinition Width="10*"/>
+                        <ColumnDefinition Width="10*"/>
+                        <ColumnDefinition Width="10*"/>
+                        <ColumnDefinition Width="10*"/>
+                        <ColumnDefinition Width="10*"/>
+                        <ColumnDefinition Width="10*"/>
+                        <ColumnDefinition Width="10*"/>
+                        <ColumnDefinition Width="10*"/>
+                        <ColumnDefinition Width="10*"/>
+                        <ColumnDefinition Width="10*"/>
+                        <ColumnDefinition Width="10*"/>
+                        <ColumnDefinition Width="10*"/>
+                        <ColumnDefinition Width="10*"/>
+                        <ColumnDefinition Width="10*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Name="Add_comanda" Content="+" Grid.Column="15" Margin="0,0,0,0" Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="2" Click="Add_comanda_Click" Background="RoyalBlue" BorderBrush="RoyalBlue" Foreground="{DynamicResource MaterialDesignDarkForeground}" Style="{StaticResource MaterialDesignIconButton}" FontSize="36" FontFamily="Times New Roman" FontWeight="Bold"/>
+                    <DataGrid x:Name="Coman_datagrid" Grid.Column="1" Grid.Row="4" Grid.RowSpan="13" Grid.ColumnSpan="16" ItemsSource="{Binding COMANDA_LISTA}" AutoGenerateColumns="False" IsReadOnly="True" Background="#FFDEDEDE">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID" Binding="{Binding ID}" Width="*"/>
+                            <DataGridTextColumn Header="Descrição" Binding="{Binding STATUS_COMANDA}" Width="*"/>
+
+                            <DataGridTextColumn Header="Data de criação" Binding="{Binding DATA_CRIACAO}" Width="*"/>
+                        </DataGrid.Columns>
+                        <DataGrid.Resources>
+                            <Style TargetType="DataGridRow">
+
+
+                                <EventSetter Event="MouseDoubleClick" Handler="DataGridRow_MouseDoubleClick"/>
+                                <Style.Triggers>
+
+
+
+
+                                </Style.Triggers>
+                            </Style>
+
+                        </DataGrid.Resources>
+                    </DataGrid>
+
+                </Grid>
+
+            </TabItem>
+
+        </TabControl>
+        <Button x:Name="Minimizar_txb" Content="_" Grid.Column="1" Margin="0,0,0,0" Grid.RowSpan="3" Grid.Row="0" d:LayoutOverrides="Height" Grid.ColumnSpan="3" Width="49" Click="Minimizar_txb_Click" Background="RoyalBlue"/>
+        <Button x:Name="Fechar_txb" Content="X" Grid.Column="4" Margin="0,0,0,0" Grid.RowSpan="3" Grid.Row="0" d:LayoutOverrides="Height" Grid.ColumnSpan="3" Width="49" Click="Fechar_txb_Click" Background="#FFE63838"/>
+
+    </Grid>
+</Window>

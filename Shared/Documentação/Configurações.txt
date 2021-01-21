@@ -1,0 +1,6 @@
+﻿Configurações de Planos de Contas
+Padrão: PLCTA_
+
+	PLCTA_VENDA_MERCADORIA				Receita vinda de Venda de Mercadorias
+	PLCTA_CTAS_RECEBER					Contas a Receber 
+	PLCTA_CAIXA_GERAL					Caixa Geral

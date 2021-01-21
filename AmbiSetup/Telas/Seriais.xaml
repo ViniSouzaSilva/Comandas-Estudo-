@@ -1,0 +1,42 @@
+﻿<Page x:Class="AmbiSetup.Telas.Seriais"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AmbiSetup.Telas"
+      xmlns:Models="clr-namespace:AmbiSetup.Models"
+      mc:Ignorable="d" 
+      d:DesignHeight="333.04" d:DesignWidth="494"
+      Title="Instalação do AmbiStore"
+      xml:space="default" FontFamily="{StaticResource FiraSans Regular}">
+    <Page.DataContext>
+        <Models:AUX_SETUP_CLASS/>
+    </Page.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="55"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Border BorderBrush="Black" BorderThickness="0 0 0 1" Background="White">
+            <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Margin="15">
+                <TextBlock.Inlines>
+                    <Run FontFamily="{StaticResource FiraSans Bold}">Digitação dos Seriais</Run>
+                    <LineBreak/>
+                    <Run xml:space="preserve">       Por favor, insira os seriais que foram enviados a você pelo suporte.</Run>
+                </TextBlock.Inlines>
+            </TextBlock>
+        </Border>
+        <StackPanel Grid.Row="1">
+            <Label FontSize="11" Content="AmbiStore (Obrigatóro)" Margin="30, 15, 30, 5" Padding="0"/>
+            <TextBox KeyDown="TextBox_KeyDown" Margin="30,0, 30, 10" Text="{Binding AMBISTORE_SERIAL, Mode=TwoWay}"/>
+            <Label FontSize="11" Content="AmbiTech" Margin="30, 5" Padding="0"/>
+            <TextBox Margin="30,0, 30, 10" Text="{Binding AMBITECH_SERIAL, Mode=TwoWay}"/>
+            <Label FontSize="11" Content="AmbiMaitre" Margin="30, 5" Padding="0"/>
+            <TextBox Margin="30,0, 30, 10" Text="{Binding AMBIMAITRE_SERIAL, Mode=TwoWay}"/>
+            <Label FontSize="11" Content="AmbiCD" Margin="30, 5" Padding="0"/>
+            <TextBox Margin="30,0, 30, 10" Text="{Binding AMBICD_SERIAL, Mode=TwoWay}"/>
+            <Label FontSize="11" Content="AmbiStore (Obrigatóro)" Margin="30, 5" Padding="0"/>
+            <TextBox Margin="30,0, 30, 10" Text="{Binding AMBIWEB_SERIAL, Mode=TwoWay}"/>
+        </StackPanel>
+    </Grid>
+</Page>

@@ -1,0 +1,42 @@
+﻿<Window x:Class="AmbiStore.Views.LOGINView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AmbiStore.Views"
+        xmlns:mdix="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:mahControls="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:ViewModels="clr-namespace:AmbiStore.ViewModels"
+        mc:Ignorable="d"
+        Title="Login" Height="450" Width="800" Background="#FFAAC6CF" ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterScreen">
+    <Grid Background="White" Height="432" Margin="395,0,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="25"/>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0" Margin="0" MouseDown="Close_Click">
+            <Label FontSize="16" Padding="0" Margin="0">❌</Label></Border>
+        <ComboBox x:Name="Login_txb" Margin="105,156,35,213" RenderTransformOrigin="0.0,0.0"
+                   ItemsSource="{Binding FUNCIONARIOS}"
+                          SelectedValue="{Binding FuncionarioSelecionado.ID}"
+                          DisplayMemberPath="CONTATO_FUNCIONARIO.NOME_FANTASIA"
+                          SelectedValuePath="ID"
+                          SelectedItem="{Binding FuncionarioSelecionado}" Grid.Row="1"/>
+        <PasswordBox x:Name="Senha_txb" Margin="105,216,35,153" GotFocus="Senha_txb_GotFocus" Grid.Row="1"/>
+        <Button x:Name="Login_btn" Content="Login" Margin="110,310,55,0" Height="63" VerticalAlignment="Top" Foreground="#FFFBFBFB" FontFamily="Calibri" FontSize="20" FontWeight="Bold" Background="#FFAAC6CF" BorderBrush="#FFAAC6CF" Click="Login_btn_Click" Grid.Row="1"/>
+        <Label Content="Login" Margin="43,161,267,213" FontFamily="Calibri" Width="70" FontSize="16" Foreground="#FF082380" Grid.Row="1"/>
+        <Label Content="Senha" Margin="43,216,267,153" FontFamily="Calibri" Width="70" FontSize="16" RenderTransformOrigin="0.5,1.001" Foreground="#FF082380" Grid.Row="1"/>
+        <Image Height="105" VerticalAlignment="Top" Margin="95,12,46,0" Source="C:\\Users\\Usuario\\Downloads\\horizontal_on_white_by_logaster.png" Grid.Row="1">
+            <Image.OpacityMask>
+                <ImageBrush TileMode="None" Stretch="Fill"/>
+            </Image.OpacityMask>
+        </Image>
+        <TextBlock Margin="-303,16,490,229" Text="Uma mensagem maneira tchiriri tcharará" TextWrapping="Wrap" Height="161" FontFamily="Calibri" FontSize="20" Foreground="White" Grid.Row="1"/>
+
+    </Grid>
+
+</Window>

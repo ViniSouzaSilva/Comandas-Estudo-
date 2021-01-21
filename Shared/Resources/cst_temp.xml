@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TB_CST_SIS>
+  <CST_RECORD>
+    <COD_CST>000</COD_CST>
+    <DESCRICAO>Nacional, exceto as indicados nos códigos 3 a 5 - Tributada integralmente;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>010</COD_CST>
+    <DESCRICAO>Nacional, exceto as indicados nos códigos 3 a 5 - Tributada e com cobrança do ICMS por Substituição Tributária;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>020</COD_CST>
+    <DESCRICAO>Nacional, exceto as indicados nos códigos 3 a 5 - Com redução de base de cálculo;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>030</COD_CST>
+    <DESCRICAO>Nacional, exceto as indicados nos códigos 3 a 5 - Isenta ou não tributada e com cobrança do ICMS por Substituição Tributária;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>040</COD_CST>
+    <DESCRICAO>Nacional, exceto as indicados nos códigos 3 a 5 - Isenta;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>041</COD_CST>
+    <DESCRICAO>Nacional, exceto as indicados nos códigos 3 a 5 - Não Tributada;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>050</COD_CST>
+    <DESCRICAO>Nacional, exceto as indicados nos códigos 3 a 5 - Com suspensão;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>051</COD_CST>
+    <DESCRICAO>Nacional, exceto as indicados nos códigos 3 a 5 - Com diferimento;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>060</COD_CST>
+    <DESCRICAO>Nacional, exceto as indicados nos códigos 3 a 5 - ICMS cobrado anteriormente por Substituição Tributária;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>070</COD_CST>
+    <DESCRICAO>Nacional, exceto as indicados nos códigos 3 a 5 - Com redução de base de cálculo e cobrança do ICMS por Substituição Tributária;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>090</COD_CST>
+    <DESCRICAO>Nacional, exceto as indicados nos códigos 3 a 5 - Outras;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>100</COD_CST>
+    <DESCRICAO>Estrangeira - Importação direta, exceto a indicada no código 6 - Tributada Integralmente;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>110</COD_CST>
+    <DESCRICAO>Estrangeira - Importação direta, exceto a indicada no código 6 - Tributada e com cobrança do ICMS por Substituição Tributária;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>120</COD_CST>
+    <DESCRICAO>Estrangeira - Importação direta, exceto a indicada no código 6 - Com redução de base de cálculo;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>130</COD_CST>
+    <DESCRICAO>Estrangeira - Importação direta, exceto a indicada no código 6 - Isenta ou não tributada e com cobrança do ICMS por Substituição Tributária;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>140</COD_CST>
+    <DESCRICAO>Estrangeira - Importação direta, exceto a indicada no código 6 - Isenta;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>141</COD_CST>
+    <DESCRICAO>Estrangeira - Importação direta, exceto a indicada no código 6 - Não Tributada;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>150</COD_CST>
+    <DESCRICAO>Estrangeira - Importação direta, exceto a indicada no código 6 - Com suspensão;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>151</COD_CST>
+    <DESCRICAO>Estrangeira - Importação direta, exceto a indicada no código 6 - Com diferimento;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>160</COD_CST>
+    <DESCRICAO>Estrangeira - Importação direta, exceto a indicada no código 6 - ICMS cobrado anteriormente por Substituição Tributária;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>170</COD_CST>
+    <DESCRICAO>Estrangeira - Importação direta, exceto a indicada no código 6 - Com redução de base de cálculo e cobrança do ICMS por Substituição Tributária;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>190</COD_CST>
+    <DESCRICAO>Estrangeira - Importação direta, exceto a indicada no código 6 - Outras;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>200</COD_CST>
+    <DESCRICAO>Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 - Tributada integralmente;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>210</COD_CST>
+    <DESCRICAO>Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 - Tributada e com cobrança do ICMS por Substituição Tributária;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>220</COD_CST>
+    <DESCRICAO>Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 - Com redução de base de cálculo;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>230</COD_CST>
+    <DESCRICAO>Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 - Isenta ou não tributada e com cobrança do ICMS por Substituição Tributária;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>240</COD_CST>
+    <DESCRICAO>Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 - Isenta;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>241</COD_CST>
+    <DESCRICAO>Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 - Não tributada;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>250</COD_CST>
+    <DESCRICAO>Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 - Com suspensão;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>251</COD_CST>
+    <DESCRICAO>Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 - Coim diferimento;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>260</COD_CST>
+    <DESCRICAO>Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 - ICMS cobrado anteriormente por Substituição Tributária;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>270</COD_CST>
+    <DESCRICAO>Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 - Com redução da base de cálculo e cobrança do ICMS por Substituição Tributária;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>290</COD_CST>
+    <DESCRICAO>Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 - Outras;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>300</COD_CST>
+    <DESCRICAO>Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) - Tributada integralmente</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>310</COD_CST>
+    <DESCRICAO>Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) - Tributada e com cobrança do ICMS por Substituição Tributária;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>320</COD_CST>
+    <DESCRICAO>Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) - Com redução de base de cálculo;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>330</COD_CST>
+    <DESCRICAO>Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) - Isenta ou não tributada e com cobrança do ICMS por Substituição Tributária;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>340</COD_CST>
+    <DESCRICAO>Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) - Isenta;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>341</COD_CST>
+    <DESCRICAO>Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) - Não tributada;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>350</COD_CST>
+    <DESCRICAO>Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) - Com suspensão;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>351</COD_CST>
+    <DESCRICAO>Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) - Com diferimento;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>360</COD_CST>
+    <DESCRICAO>Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) - ICMS cobrado anteriormente por Substituição Tributária;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>370</COD_CST>
+    <DESCRICAO>Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) - Com redução da base de cálculo e cobrança do ICMS por Substituição Tributária;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>390</COD_CST>
+    <DESCRICAO>Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) - Outras;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>400</COD_CST>
+    <DESCRICAO>Nacional, cuja produção tenha sido feita em conformidade com os Processos Produtivos Básicos de que tratam o Decreto-Lei no.288/67 e as Leis no.8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>410</COD_CST>
+    <DESCRICAO>Nacional, cuja produção tenha sido feita em conformidade com os Processos Produtivos Básicos de que tratam o Decreto-Lei no.288/67 e as Leis no.8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada e com cobrança do ICMS por Substituição Tributária;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>420</COD_CST>
+    <DESCRICAO>Nacional, cuja produção tenha sido feita em conformidade com os Processos Produtivos Básicos de que tratam o Decreto-Lei no.288/67 e as Leis no.8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Com redução de base de cálculo;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>430</COD_CST>
+    <DESCRICAO>Nacional, cuja produção tenha sido feita em conformidade com os Processos Produtivos Básicos de que tratam o Decreto-Lei no.288/67 e as Leis no.8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Isenta ou não tributada e com cobrança do ICMS por Substituição Tributária</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>440</COD_CST>
+    <DESCRICAO>Nacional, cuja produção tenha sido feita em conformidade com os Processos Produtivos Básicos de que tratam o Decreto-Lei no.288/67 e as Leis no.8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Isenta;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>441</COD_CST>
+    <DESCRICAO>Nacional, cuja produção tenha sido feita em conformidade com os Processos Produtivos Básicos de que tratam o Decreto-Lei no.288/67 e as Leis no.8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Não tributada;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>450</COD_CST>
+    <DESCRICAO>Nacional, cuja produção tenha sido feita em conformidade com os Processos Produtivos Básicos de que tratam o Decreto-Lei no.288/67 e as Leis no.8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Com suspensão;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>451</COD_CST>
+    <DESCRICAO>Nacional, cuja produção tenha sido feita em conformidade com os Processos Produtivos Básicos de que tratam o Decreto-Lei no.288/67 e as Leis no.8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Com diferimento;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>460</COD_CST>
+    <DESCRICAO>Nacional, cuja produção tenha sido feita em conformidade com os Processos Produtivos Básicos de que tratam o Decreto-Lei no.288/67 e as Leis no.8.248/91, 8.387/91, 10.176/01 e 11.484/07 - ICMS cobrado anteriormente por Substituição Tributária</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>470</COD_CST>
+    <DESCRICAO>Nacional, cuja produção tenha sido feita em conformidade com os Processos Produtivos Básicos de que tratam o Decreto-Lei no.288/67 e as Leis no.8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Com redução da base de cálculo e cobrança do ICMS por Substituição Tributária;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>490</COD_CST>
+    <DESCRICAO>Nacional, cuja produção tenha sido feita em conformidade com os Processos Produtivos Básicos de que tratam o Decreto-Lei no.288/67 e as Leis no.8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Outras;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>500</COD_CST>
+    <DESCRICAO>Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Tributada integralmente;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>510</COD_CST>
+    <DESCRICAO>Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Tributada e com cobrança do ICMS por Substituição Tributária;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>520</COD_CST>
+    <DESCRICAO>Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) -  Com redução de base de cálculo;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>530</COD_CST>
+    <DESCRICAO>Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Isenta ou não tributada e com cobrança do ICMS por Substituição Tributária;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>540</COD_CST>
+    <DESCRICAO>Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Isenta;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>541</COD_CST>
+    <DESCRICAO>Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Não Tributada;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>550</COD_CST>
+    <DESCRICAO>Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Com suspensão;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>551</COD_CST>
+    <DESCRICAO>Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Com diferimento;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>560</COD_CST>
+    <DESCRICAO>Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - ICMS cobrado anteriormente por Substituição Tributária;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>570</COD_CST>
+    <DESCRICAO>Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Com redução da base de cálculo e cobrança do ICMS por Substituição Tributária;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>590</COD_CST>
+    <DESCRICAO>Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Outras;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>600</COD_CST>
+    <DESCRICAO>Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Tributada integralmente;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>610</COD_CST>
+    <DESCRICAO>Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Tributada e com cobrança do ICMS por Substituição Tributária;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>620</COD_CST>
+    <DESCRICAO>Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>630</COD_CST>
+    <DESCRICAO>Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Isenta ou não tributada e com cobrança do ICMS por Substituição Tributária;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>640</COD_CST>
+    <DESCRICAO>Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Isenta;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>641</COD_CST>
+    <DESCRICAO>Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>650</COD_CST>
+    <DESCRICAO>Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com suspensão;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>651</COD_CST>
+    <DESCRICAO>Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com diferimento;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>660</COD_CST>
+    <DESCRICAO>Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - ICMS cobrado anteriormente por Substituição Tributária;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>670</COD_CST>
+    <DESCRICAO>Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução da base de cálculo e cobrança do ICMS por Substituição Tributária;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>690</COD_CST>
+    <DESCRICAO>Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Outras;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>700</COD_CST>
+    <DESCRICAO>Estrangeira - Adquirida no mercado interno, sem similiar nacional, constante em lista de Resolução CAMEX - Tributada integralmente;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>710</COD_CST>
+    <DESCRICAO>Estrangeira - Adquirida no mercado interno, sem similiar nacional, constante em lista de Resolução CAMEX - Tributada e com cobrança do ICMS por Substituição Tributária;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>720</COD_CST>
+    <DESCRICAO>Estrangeira - Adquirida no mercado interno, sem similiar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>730</COD_CST>
+    <DESCRICAO>Estrangeira - Adquirida no mercado interno, sem similiar nacional, constante em lista de Resolução CAMEX - Isenta ou não tributada e com cobrança do ICMS por Substituição Tributária;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>740</COD_CST>
+    <DESCRICAO>Estrangeira - Adquirida no mercado interno, sem similiar nacional, constante em lista de Resolução CAMEX - Isenta;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>741</COD_CST>
+    <DESCRICAO>Estrangeira - Adquirida no mercado interno, sem similiar nacional, constante em lista de Resolução CAMEX - Não Tributada;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>750</COD_CST>
+    <DESCRICAO>Estrangeira - Adquirida no mercado interno, sem similiar nacional, constante em lista de Resolução CAMEX -  Com suspensão;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>751</COD_CST>
+    <DESCRICAO>Estrangeira - Adquirida no mercado interno, sem similiar nacional, constante em lista de Resolução CAMEX - Com diferimento;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>760</COD_CST>
+    <DESCRICAO>Estrangeira - Adquirida no mercado interno, sem similiar nacional, constante em lista de Resolução CAMEX - ICMS cobrado anteriormente por Substituição Tributária;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>770</COD_CST>
+    <DESCRICAO>Estrangeira - Adquirida no mercado interno, sem similiar nacional, constante em lista de Resolução CAMEX - Com redução da base de cálculo e cobrança do ICMS por Substituição Tributária;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>790</COD_CST>
+    <DESCRICAO>Estrangeira - Adquirida no mercado interno, sem similiar nacional, constante em lista de Resolução CAMEX - Outras;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>800</COD_CST>
+    <DESCRICAO>Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada integralmente;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>810</COD_CST>
+    <DESCRICAO>Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada e com cobrança do ICMS por substituição tributária;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>820</COD_CST>
+    <DESCRICAO>Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>830</COD_CST>
+    <DESCRICAO>Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta ou não tributada e com cobrança do ICMS por substituição tributária;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>840</COD_CST>
+    <DESCRICAO>Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>841</COD_CST>
+    <DESCRICAO>Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Não tributada</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>850</COD_CST>
+    <DESCRICAO>Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Suspensão;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>851</COD_CST>
+    <DESCRICAO>Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Diferimento</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>860</COD_CST>
+    <DESCRICAO>Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - ICMS cobrado anteriormente por substituição tributária;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>870</COD_CST>
+    <DESCRICAO>Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária;</DESCRICAO>
+  </CST_RECORD>
+  <CST_RECORD>
+    <COD_CST>890</COD_CST>
+    <DESCRICAO>Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) – Outras;</DESCRICAO>
+  </CST_RECORD>
+</TB_CST_SIS>

@@ -1,0 +1,44 @@
+﻿<Window x:Class="AmbiStore.Views.MENUSTRIPView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:AmbiStore.ViewModels"
+        xmlns:local="clr-namespace:AmbiStore.Views"
+        xmlns:mdix="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:mahControls="http://metro.mahapps.com/winfx/xaml/controls"
+        mc:Ignorable="d"
+        Title="MenuStrip" Height="338" Width="1423" Closing="Window_Closing" ResizeMode="NoResize"
+        Activated="Window_Activated">
+    <Grid VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0" >
+        <Menu>
+            <!--<Menu.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <Grid/>
+                </ItemsPanelTemplate>
+            </Menu.ItemsPanel>-->
+            <Button Height="80" Width="80" IsEnabled="{Binding PERMITE_DASHBOARD}" Content="Dashboard"/>
+            <Button Height="80" Width="80" IsEnabled="{Binding PERMITE_CONTATOS}" Content="Contatos" Click="Contatos_Click"/>
+            <Button Height="80" Width="80" IsEnabled="{Binding PERMITE_ESTOQUE}" Content="Estoque" Click="Estoques_Click"/>
+            <Button Height="80" Width="80" IsEnabled="{Binding PERMITE_DAVS}" Content="DAV" />
+            <Button Height="80" Width="80" IsEnabled="{Binding PERMITE_VENDAS}" Content="NF Venda" Click="Vendas_Click" />
+            <Button Height="80" Width="80" IsEnabled="{Binding PERMITE_COMPRAS}" Content="NF Compra" Click="Compras_Click"/>
+            <Button Height="80" Width="80" IsEnabled="False" Click="Button_Click" Content="Mov. Caixa"/>
+            <Button Height="80" Width="80" IsEnabled="False" Click="Button_Click" Content="Bancos"/>
+            <Button Height="80" Width="80" IsEnabled="False" Click="Button_Click" Content="Cheques"/>
+            <Button Height="80" Width="80" IsEnabled="False" Click="Button_Click" Content="A Receber"/>
+            <Button Height="80" Width="80" IsEnabled="False" Click="Button_Click" Content="A Pagar"/>
+            <MenuItem Height="80" Width="80" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Padding="0">
+                <MenuItem.Header>
+                    <Border Width="80" Height="80" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Image HorizontalAlignment="Center" Source="/Resources/daffy.png"/>
+                    </Border>
+                </MenuItem.Header>
+                <MenuItem Header="Funcionários" Click="Funcionarios_Click"/>
+                <MenuItem Header="Menu 2" IsEnabled="False"/>
+                <MenuItem Header="Menu 3" IsEnabled="False"/>
+            </MenuItem>
+            <Button Height="80" Width="80" Click="Button_Click" Content="Configuracoes"/>
+        </Menu>
+    </Grid>
+</Window>

@@ -1,0 +1,13 @@
+﻿<Application x:Class="AmbiSetup.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:AmbiSetup"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <FontFamily x:Key="FiraSans Regular">pack://application:,,,/Fonts/#Fira Sans Regular</FontFamily>
+        <FontFamily x:Key="FiraSans Bold">pack://application:,,,/Fonts/#Fira Sans Bold</FontFamily>
+        <FontFamily x:Key="FiraSans BoldItalic">pack://application:,,,/Fonts/#Fira Sans Bold Italic</FontFamily>
+
+
+    </Application.Resources>
+</Application>

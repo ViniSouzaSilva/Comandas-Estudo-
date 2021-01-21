@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AmbiStore.Shared.EFCore.Models.CARGO_FUNCIONARIO" Collapsed="true">
+    <Position X="28.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAABAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>EFCore\Models\CARGO_FUNCIONARIO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmbiStore.Shared.EFCore.Models.CFOP_SIS">
+    <Position X="1" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKAAAAAAACAAAAAAAAAAACAAAAABAAAAAAAAAAAAAgQ=</HashCode>
+      <FileName>EFCore\Models\CFOP.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmbiStore.Shared.EFCore.Models.CONFIGURACAO" Collapsed="true">
+    <Position X="30" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEIAAAAAAAAAAACIAAAgAAAAAAAAAAAAgAgAAAE=</HashCode>
+      <FileName>EFCore\Models\CONFIGURACAO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmbiStore.Shared.EFCore.Models.CONTATO">
+    <Position X="12.5" Y="6.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AIAABABSiQBiAAAAIAIAAAQAAAAMAE4BAAQQQJAAAEA=</HashCode>
+      <FileName>EFCore\Models\CONTATO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmbiStore.Shared.EFCore.Models.EMITENTE" Collapsed="true">
+    <Position X="31.75" Y="0.5" Width="1.5" />
+
+    <TypeIdentifier>
+      <HashCode>AAACAAByoQAIAAAAAQIAAAwgAAQMAAIBAACQADAAAkA=</HashCode>
+      <FileName>EFCore\Models\EMITENTE.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmbiStore.Shared.EFCore.Models.ESTOQUE">
+    <Position X="6.75" Y="12.5" Width="3" />
+
+    <TypeIdentifier>
+      <HashCode>AIAIBAEAUMQAR4AgAhQsCDAIECEZEFIAjBAjQACCKBw=</HashCode>
+      <FileName>EFCore\Models\ESTOQUE.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="TAXA_UF" />
+      <Property Name="UNI_MEDIDA" />
+      <Property Name="CFOP_NF" />
+      <Property Name="ULTIMO_FORNECEDOR" />
+      <Property Name="GRUPO" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="AmbiStore.Shared.EFCore.Models.FORMAPAGAMENTO">
+    <Position X="15.5" Y="3.25" Width="1.75" />
+
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAEAAAAAAAAAAAAI=</HashCode>
+      <FileName>EFCore\Models\FORMAPAGAMENTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmbiStore.Shared.EFCore.Models.FUNCIONARIO">
+    <Position X="18.75" Y="3.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAJQAAAwABAEEAAAggAAAAAAEAAACAAAACgAAA=</HashCode>
+      <FileName>EFCore\Models\FUNCIONARIO.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MUNICIPIO" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="AmbiStore.Shared.EFCore.Models.LICENCA" Collapsed="true">
+
+    <Position X="30" Y="1.5" Width="1.5" />
+
+    <TypeIdentifier>
+      <HashCode>AAAAGAAAAAAIAAAAAABEAAAAABBAAAAAAAAgABAABAA=</HashCode>
+      <FileName>EFCore\Models\LICENCA.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmbiStore.Shared.EFCore.Models.MUNICIPIO">
+
+    <Position X="18.75" Y="0.5" Width="1.5" />
+
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAACCgAAAAAAAAIAAAEAAAAAAAAA=</HashCode>
+      <FileName>EFCore\Models\MUNICIPIO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmbiStore.Shared.EFCore.Models.NATUREZA_OPERACAO">
+
+    <Position X="1.5" Y="2.5" Width="2.25" />
+
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAIAgAAAQACAADAABAEAEAADAAAAAAAE=</HashCode>
+      <FileName>EFCore\Models\NATUREZA_OPERACAO.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CFOP" />
+      <Property Name="TAXA_UF" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="AmbiStore.Shared.EFCore.Models.PARCELAMENTO">
+
+    <Position X="18.75" Y="8.25" Width="1.75" />
+
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAIAAAAABAAAAABAEAAAJAAAAAAAAA=</HashCode>
+      <FileName>EFCore\Models\PARCELAMENTO.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="FORMAPAGAMENTO" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="AmbiStore.Shared.EFCore.Models.TAXA_UF">
+
+    <Position X="4.5" Y="5.75" Width="1.5" />
+
+    <TypeIdentifier>
+      <HashCode>IkACAECAACAIgKpgAUAIApAAQBARAIQAAAIBQAAACEw=</HashCode>
+      <FileName>EFCore\Models\TAXA_UF.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmbiStore.Shared.EFCore.Models.TERMINAL">
+
+    <Position X="24.75" Y="2.25" Width="2.5" />
+
+    <TypeIdentifier>
+      <HashCode>AAAgABgECUAQAxBACGAAAAAAAAAAABUEANgAAAAgEAg=</HashCode>
+      <FileName>EFCore\Models\TERMINAL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmbiStore.Shared.EFCore.Models.UNI_MEDIDA">
+
+    <Position X="6" Y="20.25" Width="1.5" />
+
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAgAAAAAAAAAABBAEAAAAAAAAAAAQA=</HashCode>
+      <FileName>EFCore\Models\UNIMEDIDA.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmbiStore.Shared.EFCore.Models.VENDA">
+
+    <Position X="1" Y="6.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AQIBIAAQAIGkAIEgAAAgABAAAUAAEFAqAQAUAQAAkCA=</HashCode>
+      <FileName>EFCore\Models\VENDA.cs</FileName>
+      <NewMemberFileName>EFCore\Models\Venda.cs</NewMemberFileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="NATUREZA_OPERACAO" />
+      <Property Name="CLIENTE" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="ITENS" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="AmbiStore.Shared.EFCore.Models.GRUPO">
+
+    <Position X="8.5" Y="20.75" Width="1.5" />
+
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>EFCore\Models\GRUPO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmbiStore.Shared.EFCore.Models.PRODUTO">
+    <Position X="12.5" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAABAIIAAACAEAAAAAAAQAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>EFCore\Models\PRODUTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmbiStore.Shared.EFCore.Models.SERVICO">
+    <Position X="2.5" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EFCore\Models\SERVICO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmbiStore.Shared.EFCore.Models.FRENTE_TURNO">
+    <Position X="21.5" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAACAAIAgAAAAAAAIAAAAAAAAAgAAEAAA=</HashCode>
+      <FileName>EFCore\Models\FRENTE_TURNO.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="TERMINAL" />
+      <Property Name="OPERADOR" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="MOVIMENTOs" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="AmbiStore.Shared.EFCore.Models.PARAMETRIZACAO">
+    <Position X="7.25" Y="9.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>EFCore\Models\PARAMETRIZACAO.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="FORNECEDOR" />
+      <Property Name="ESTOQUE" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="AmbiStore.Shared.EFCore.Models.FRENTE_FECHAMENTO" Collapsed="true">
+    <Position X="28.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAACAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>EFCore\Models\FRENTE_FECHAMENTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmbiStore.Shared.EFCore.Models.VENDA_PAGAMENTO">
+    <Position X="9.5" Y="4.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQABAAAAAAAJAAAAAAAAI=</HashCode>
+      <FileName>EFCore\Models\VENDA_PAGAMENTO.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="FORMAPAGAMENTO" />
+      <Property Name="PARCELAMENTO" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="AmbiStore.Shared.EFCore.Models.FRENTE_MOVIMENTO">
+    <Position X="21.25" Y="1.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAEAAQCAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EFCore\Models\FRENTE_MOVIMENTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmbiStore.Shared.EFCore.Models.DAV">
+    <Position X="15.25" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIIAAAAAIAgEAAEAAAAAAEAAAAAAAEAAAIAQAAAAAAA=</HashCode>
+      <FileName>EFCore\Models\DAV.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CLIENTE" />
+      <Property Name="VENDEDOR" />
+      <Property Name="TRANSPORTADORA" />
+      <Property Name="PARCELAMENTO" />
+      <Property Name="STATUS" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="ITENS" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="AmbiStore.Shared.EFCore.Models.DAV_STATUS">
+    <Position X="18.25" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAACAAAAAAAAA=</HashCode>
+      <FileName>EFCore\Models\DAV_STATUS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmbiStore.Shared.EFCore.Models.DAV_ITEM">
+    <Position X="11.5" Y="14.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAACEAAAAAAAAAAAAAAAAgAAACAAA=</HashCode>
+      <FileName>EFCore\Models\DAV_ITEM.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ESTOQUE" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="AmbiStore.Shared.EFCore.Models.VENDA_ITEM">
+    <Position X="4.5" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAACAAAAAAAAAAAAggAAACAAA=</HashCode>
+      <FileName>EFCore\Models\VENDA_ITEM.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ESTOQUE" />
+      <Property Name="CFOP" />
+      <Property Name="UNI_MEDIDA" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="AmbiStore.Shared.EFCore.Models.COMPRA">
+    <Position X="12.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAEAAAAIgIABAAgAASAACACgAAAsAIAACAARAAA=</HashCode>
+      <FileName>EFCore\Models\COMPRA.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="COMPRADOR" />
+      <Property Name="NATUREZA_OPERACAO" />
+      <Property Name="PARCELAMENTO" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="AmbiStore.Shared.EFCore.Models.NFE" Collapsed="true">
+    <Position X="31.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAQAAAAAQAAAAAAUAAAAAAAACAAAABAQAAEAA=</HashCode>
+      <FileName>EFCore\Models\NFE.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmbiStore.Shared.EFCore.Models.BANCO_CONTA">
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAABACAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EFCore\Models\BANCO_CONTA.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmbiStore.Shared.EFCore.Models.BOLETO">
+    <Position X="15.5" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIQAAAAAAAAAAAAAAAAQCAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EFCore\Models\BOLETO.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="BANCO" />
+      <Property Name="CLIENTE" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="AmbiStore.Shared.EFCore.Models.BOLETO_CONFIG">
+    <Position X="23.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAQgEAAKAAAIAAALAQAgiAAAAAAAACAAgAgAA=</HashCode>
+      <FileName>EFCore\Models\BOLETO_CONFIG.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="BANCO" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="AmbiStore.Shared.EFCore.Models.CONTA_RECEBER">
+    <Position X="15.5" Y="6" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAABAAAABAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EFCore\Models\CONTA_RECEBER.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CLIENTE" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="AmbiStore.Shared.EFCore.Models.CONTA_RECEBER_PAGTO">
+    <Position X="18.25" Y="17" Width="2" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAEAAAAAAAAAAAAAQAAAAAAAABQAIAAAAAA=</HashCode>
+      <FileName>EFCore\Models\CONTA_RECEBER_PAGTO.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="BOLETO" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="AmbiStore.Shared.EFCore.Models.REMOTE_COMMAND" Collapsed="true">
+    <Position X="28.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EFCore\Models\REMOTE_COMMAND.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmbiStore.Shared.EFCore.Models.CONTATO_PF">
+    <Position X="9.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAABIAAAAIAAIAAAAAAACAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>EFCore\Models\CONTATO_PF.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CONTATO" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="AmbiStore.Shared.EFCore.Models.CONTATO_PJ">
+    <Position X="15.5" Y="9" Width="1.5" />
+
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIEAAAAAAQAAAAAAAIABAAAAAAAAAAAAA=</HashCode>
+      <FileName>EFCore\Models\CONTATO_PJ.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CONTATO" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
